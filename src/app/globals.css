@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  color: #181818;
+  background-color: #f5f5f5;
+}
+
+.primaryColor {
+  color: #24a3b5;
+}
+
+.colorBlack {
+  color: #181818;
+}
+
+.colorBgBlack{
+    background-color: #181818;
+}
