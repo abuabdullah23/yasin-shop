@@ -7,6 +7,7 @@ import { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import NavbarTop from "./NavbarTop";
+import { Turn as Hamburger } from "hamburger-react";
 
 const Navbar2nd = () => {
   // TODO: user have to dynamic
@@ -70,7 +71,10 @@ const Navbar2nd = () => {
         </div>
 
         {/* Hamburger Menu */}
-        <div onClick={() => setOpen(!open)} className="lg:hidden block ease-in duration-300 z-10">
+        <div
+          onClick={() => setOpen(!open)}
+          className="lg:hidden block ease-in duration-300 z-10"
+        >
           <span>
             {open === true ? (
               <IoClose className="cursor-pointer" size={24} />
@@ -78,6 +82,7 @@ const Navbar2nd = () => {
               <HiMenuAlt3 className="cursor-pointer" size={24} />
             )}
           </span>
+          {/* <Hamburger toggled={open} toggle={setOpen} size={20} duration={.5} distance="lg" easing="ease-in"/> */}
         </div>
       </div>
 
@@ -94,7 +99,7 @@ const Navbar2nd = () => {
             </h3>
           </Link>
 
-          <NavbarTop/>
+          <NavbarTop />
 
           {/* Center Nav Item */}
           <div className="text-neutral-600">
