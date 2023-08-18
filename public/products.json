@@ -1,0 +1,143 @@
+[
+    {
+      "id": 1,
+      "name": "Smartphone Model X",
+      "category": "Electronics",
+      "description": "A powerful smartphone with advanced features.",
+      "price": 599.99,
+      "rating": 4.7,
+      "sub_category": "Smartphones",
+      "images": [
+        "https://example.com/images/smartphone1.jpg",
+        "https://example.com/images/smartphone1_2.jpg",
+        "https://example.com/images/smartphone1_3.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Wireless Headphones Pro",
+      "category": "Electronics",
+      "description": "High-quality wireless headphones with noise cancellation.",
+      "price": 149.99,
+      "rating": 4.5,
+      "sub_category": "Headphones",
+      "images": [
+        "https://example.com/images/headphones1.jpg",
+        "https://example.com/images/headphones1_2.jpg",
+        "https://example.com/images/headphones1_3.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Ultra HD Smart TV",
+      "category": "Electronics",
+      "description": "Experience stunning visuals with this Ultra HD smart TV.",
+      "price": 899.99,
+      "rating": 4.8,
+      "sub_category": "Televisions",
+      "images": [
+        "https://example.com/images/tv1.jpg",
+        "https://example.com/images/tv1_2.jpg",
+        "https://example.com/images/tv1_3.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Classic Leather Watch",
+      "category": "Fashion",
+      "description": "A stylish leather watch for a timeless look.",
+      "price": 129.99,
+      "rating": 4.3,
+      "sub_category": "Watches",
+      "images": [
+        "https://example.com/images/watch1.jpg",
+        "https://example.com/images/watch1_2.jpg",
+        "https://example.com/images/watch1_3.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Gaming Laptop Titan",
+      "category": "Electronics",
+      "description": "Dominate the gaming world with the powerful Gaming Laptop Titan.",
+      "price": 1899.99,
+      "rating": 4.9,
+      "sub_category": "Laptops",
+      "images": [
+        "https://example.com/images/laptop1.jpg",
+        "https://example.com/images/laptop1_2.jpg",
+        "https://example.com/images/laptop1_3.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Professional DSLR Camera",
+      "category": "Electronics",
+      "description": "Capture stunning photos with this professional DSLR camera.",
+      "price": 1299.99,
+      "rating": 4.6,
+      "sub_category": "Cameras",
+      "images": [
+        "https://example.com/images/camera1.jpg",
+        "https://example.com/images/camera1_2.jpg",
+        "https://example.com/images/camera1_3.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Fitness Tracker Pro",
+      "category": "Health & Fitness",
+      "description": "Monitor your health and stay active with the Fitness Tracker Pro.",
+      "price": 79.99,
+      "rating": 4.2,
+      "sub_category": "Wearables",
+      "images": [
+        "https://example.com/images/fitnesstracker1.jpg",
+        "https://example.com/images/fitnesstracker1_2.jpg",
+        "https://example.com/images/fitnesstracker1_3.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Designer Sunglasses",
+      "category": "Fashion",
+      "description": "Elevate your style with these fashionable designer sunglasses.",
+      "price": 199.99,
+      "rating": 4.7,
+      "sub_category": "Accessories",
+      "images": [
+        "https://example.com/images/sunglasses1.jpg",
+        "https://example.com/images/sunglasses1_2.jpg",
+        "https://example.com/images/sunglasses1_3.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Ultra Slim Power Bank",
+      "category": "Electronics",
+      "description": "Stay charged on the go with the Ultra Slim Power Bank.",
+      "price": 29.99,
+      "rating": 4.4,
+      "sub_category": "Accessories",
+      "images": [
+        "https://example.com/images/powerbank1.jpg",
+        "https://example.com/images/powerbank1_2.jpg",
+        "https://example.com/images/powerbank1_3.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Home Security Camera System",
+      "category": "Home & Living",
+      "description": "Keep your home secure with the advanced Security Camera System.",
+      "price": 399.99,
+      "rating": 4.6,
+      "sub_category": "Security",
+      "images": [
+        "https://example.com/images/securitycamera1.jpg",
+        "https://example.com/images/securitycamera1_2.jpg",
+        "https://example.com/images/securitycamera1_3.jpg"
+      ]
+    }
+  ]
+  
