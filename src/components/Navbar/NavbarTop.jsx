@@ -3,13 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import navItems from "./navItems";
 
-const NavbarTop = ({ setOpen }) => {
+const NavbarTop = () => {
   // TODO: Admin have to dynamic
   const user = true;
   const isAdmin = true;
-
-  // console.log(isAdmin);
 
   const urlPath = usePathname();
 
@@ -17,35 +16,19 @@ const NavbarTop = ({ setOpen }) => {
     <div>
       <div className="flex lg:justify-center">
         <ul className="list-none flex flex-col lg:flex-row gap-4 items-start lg:items-center text-sm text-neutral-200 font-semibold">
-          <li onClick={() => setOpen(false)}>
-            <Link
-              href="/"
-              className={`hover:text-[#35b5ff] transition ${urlPath === "/" ? "border-b-2 border-gray-200" : ""
-                }`}
-            >
-              Home
-            </Link>
-          </li>
-
-          <li onClick={() => setOpen(false)}>
-            <Link
-              href="/products"
-              className={`hover:text-[#35b5ff] transition ${urlPath === "/products" ? "border-b-2 border-gray-200" : ""
-                }`}
-            >
-              Products
-            </Link>
-          </li>
-
-          <li onClick={() => setOpen(false)}>
-            <Link
-              href="/about"
-              className={`hover:text-[#35b5ff] transition ${urlPath === "/about" ? "border-b-2 border-gray-200" : ""
-                }`}
-            >
-              About
-            </Link>
-          </li>
+          {
+            navItems.map((item, i) => (
+              <li key={i}>
+                <Link
+                  href={item.path}
+                  className={`hover:text-[#35b5ff] transition ${urlPath === item.path ? "border-b-2 border-gray-200" : ""
+                    }`}
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))
+          }
 
           {isAdmin && (
             <Link

@@ -38,16 +38,16 @@ const Navbar2nd = () => {
 
         {/* Right Nav Item */}
         <div className="hidden lg:block w-1/3">
-          <div className="flex items-center gap-5 justify-end">
+          <div className="flex items-center gap-8 justify-end">
             <Link href="/my-cart">
               <CartBadge />
             </Link>
             <Link href="/my-favorite">
               <FavoriteButton />
             </Link>
-            {user ? (
+
+            {/* {user ? (
               <>
-                {/* TODO: Have to dynamic */}
                 <div className="flex items-center gap-4">
                   <img
                     className="w-8 h-8"
@@ -68,7 +68,8 @@ const Navbar2nd = () => {
                   Login
                 </Link>
               </>
-            )}
+            )} */}
+
           </div>
         </div>
 
@@ -77,10 +78,9 @@ const Navbar2nd = () => {
             <CartBadge />
           </Link>
 
-          <div>
+          {/* <div>
             {user ? (
               <>
-                {/* TODO: Have to dynamic */}
                 <div className="flex items-center gap-4">
                   <img
                     className="w-6 h-6"
@@ -99,13 +99,13 @@ const Navbar2nd = () => {
                 </Link>
               </>
             )}
-          </div>
+          </div> */}
         </div>
 
         {/* Hamburger Menu */}
         <div
           onClick={() => setOpen(!open)}
-          className="lg:hidden block ease-in duration-300 z-10"
+          className="lg:hidden block ease-in duration-300 ml-4 z-10"
         >
           <span className="hidden md:block ml-3">
             {open === true ? (
@@ -130,7 +130,7 @@ const Navbar2nd = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden bg-neutral-800 h-screen w-screen text-neutral-100 absolute lg:static transition-all duration-500 mt-6 p-8 top-6  ${open ? "top-[24px] left-0" : "left-[-100%]"
+        className={`lg:hidden bg-neutral-800 h-screen w-screen text-neutral-100 absolute lg:static transition-all duration-500 mt-6 p-8 top-6 ${open ? "top-[24px] left-0" : "left-[-100%]"
           }`}
       >
         <div className="w-full flex flex-col gap-4">
@@ -140,7 +140,7 @@ const Navbar2nd = () => {
             </h3>
           </Link>
 
-          <NavbarTop setOpen={setOpen} />
+          <NavbarTop />
 
           {/* Right Nav Item */}
           <div className="flex flex-col gap-4">
@@ -156,11 +156,6 @@ const Navbar2nd = () => {
               <>
                 {/* TODO: Have to dynamic */}
                 <div className="flex items-center gap-4">
-                  {/* <img
-                    className="w-8 h-8"
-                    src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png"
-                    alt="User Photo"
-                  /> */}
                   <button className="py-1 px-4 rounded-full border-2 border-[#24A3B5] hover:bg-[#181818] hover:text-white">
                     Logout
                   </button>

@@ -1,24 +1,77 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { categories } from "./categoriesData";
 import CategorySingle from "./CategorySingle";
+import { useEffect, useState } from "react";
+import { getAllCategories } from "@/api/categories";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const Categories = () => {
   const pathName = usePathname();
   const category = pathName.split("/")[2];
-  console.log(category);
+  const [categories, setCategories] = useState([]);
+
+  // get categories
+  useEffect(() => {
+    getAllCategories()
+      .then(data => {
+        setCategories(data)
+      })
+  }, []);
+
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 7
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 7
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 6
+    },
+    mdTablet: {
+      breakpoint: { max: 991, min: 464 },
+      items: 5
+    },
+    mobile: {
+      breakpoint: { max: 768, min: 0 },
+      items: 4
+    },
+    smmobile: {
+      breakpoint: { max: 640, min: 0 },
+      items: 3
+    },
+    xsmobile: {
+      breakpoint: { max: 440, min: 0 },
+      items: 2
+    },
+  }
 
   return (
-    <div className="pt-4 flex flex-row gap-1 items-center justify-between  overflow-x-auto">
-      {categories.map((item) => (
-        <CategorySingle
-          key={item.label}
-          label={item.label}
-          icon={item.icon}
-          selected={category === item.label}
-        ></CategorySingle>
-      ))}
+    <div className="pt-2">
+      <h2 className="text-2xl font-semibold">Categories</h2>
+      <Carousel
+        autoPlay={true}
+        infinite={true}
+        arrows={true}
+        responsive={responsive}
+        transitionDuration={500}
+      >
+        {categories.map((item, i) => (
+          <CategorySingle
+            key={i}
+            label={item.label}
+            image={item.image}
+            selected={category === item.label}
+          ></CategorySingle>
+        ))}
+      </Carousel>
+
+
     </div>
   );
 };
