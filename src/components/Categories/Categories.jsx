@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { getAllCategories } from "@/api/categories";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 const Categories = () => {
   const pathName = usePathname();
@@ -53,7 +54,7 @@ const Categories = () => {
 
   return (
     <div className="pt-2">
-      <h2 className="text-2xl font-semibold">Categories</h2>
+      <SectionTitle sectionTitle={'Categories'}/>
       <Carousel
         autoPlay={true}
         infinite={true}
