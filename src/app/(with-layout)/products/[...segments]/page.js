@@ -8,7 +8,7 @@ const SingleProductPage = () => {
     <div>
       <Slider />
       <Categories />
-      SingleProductPage
+      Category wise data will be display here
     </div>
   );
 };

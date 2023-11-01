@@ -1,0 +1,394 @@
+[
+    {
+        "label": "Rice",
+        "image": ""
+    },
+    {
+        "label": "Masala",
+        "image": ""
+    },
+    {
+        "label": "Shampoo",
+        "image": ""
+    },
+    {
+        "label": "Detergent Powder",
+        "image": ""
+    },
+    {
+        "label": "Bathroom Cleaner",
+        "image": ""
+    },
+    {
+        "label": "Dishwash Powder",
+        "image": ""
+    },
+    {
+        "label": "Dishwash Soap",
+        "image": ""
+    },
+    {
+        "label": "Washing Soap",
+        "image": ""
+    },
+    {
+        "label": "Soap",
+        "image": ""
+    },
+    {
+        "label": "Saop",
+        "image": ""
+    },
+    {
+        "label": "Baby Soap",
+        "image": ""
+    },
+    {
+        "label": "Coil",
+        "image": ""
+    },
+    {
+        "label": "Diaper",
+        "image": ""
+    },
+    {
+        "label": "Baby Wipes",
+        "image": ""
+    },
+    {
+        "label": "Sanitary Napkin",
+        "image": ""
+    },
+    {
+        "label": "Toilet Brush",
+        "image": ""
+    },
+    {
+        "label": "Bathroom Brush",
+        "image": ""
+    },
+    {
+        "label": "Noodles",
+        "image": ""
+    },
+    {
+        "label": "Green Tea",
+        "image": ""
+    },
+    {
+        "label": "Liquid Dishwash",
+        "image": ""
+    },
+    {
+        "label": "Floor Cleaner",
+        "image": ""
+    },
+    {
+        "label": "Hand Wash",
+        "image": ""
+    },
+    {
+        "label": "Antiseptic Liquid",
+        "image": ""
+    },
+    {
+        "label": "Liquid Detergent",
+        "image": ""
+    },
+    {
+        "label": "Glass Cleaner",
+        "image": ""
+    },
+    {
+        "label": "Toilet Cleaner",
+        "image": ""
+    },
+    {
+        "label": "Insect Spray",
+        "image": ""
+    },
+    {
+        "label": "Mosla",
+        "image": ""
+    },
+    {
+        "label": "mix product",
+        "image": ""
+    },
+    {
+        "label": "Salt",
+        "image": ""
+    },
+    {
+        "label": "Dates",
+        "image": ""
+    },
+    {
+        "label": "Choclate",
+        "image": ""
+    },
+    {
+        "label": "Badam",
+        "image": ""
+    },
+    {
+        "label": "Atta",
+        "image": ""
+    },
+    {
+        "label": "Tea",
+        "image": ""
+    },
+    {
+        "label": "Muri",
+        "image": ""
+    },
+    {
+        "label": "Cake",
+        "image": ""
+    },
+    {
+        "label": "Biscuit",
+        "image": ""
+    },
+    {
+        "label": "Chanachur",
+        "image": ""
+    },
+    {
+        "label": "oil",
+        "image": ""
+    },
+    {
+        "label": "milk",
+        "image": ""
+    },
+    {
+        "label": "Horlicks",
+        "image": ""
+    },
+    {
+        "label": "sugar",
+        "image": ""
+    },
+    {
+        "label": "Chips",
+        "image": ""
+    },
+    {
+        "label": "Juice",
+        "image": ""
+    },
+    {
+        "label": "cold drinks",
+        "image": ""
+    },
+    {
+        "label": "Water",
+        "image": ""
+    },
+    {
+        "label": "Ice cream",
+        "image": ""
+    },
+    {
+        "label": "Frozen",
+        "image": ""
+    },
+    {
+        "label": "Tissue",
+        "image": ""
+    },
+    {
+        "label": "Feeder",
+        "image": ""
+    },
+    {
+        "label": "Musk",
+        "image": ""
+    },
+    {
+        "label": "Pampers",
+        "image": ""
+    },
+    {
+        "label": "Coffee",
+        "image": ""
+    },
+    {
+        "label": "Sauce",
+        "image": ""
+    },
+    {
+        "label": "Sampoo",
+        "image": ""
+    },
+    {
+        "label": "Cream",
+        "image": ""
+    },
+    {
+        "label": "Mask",
+        "image": ""
+    },
+    {
+        "label": "Room spray",
+        "image": ""
+    },
+    {
+        "label": "Scissor",
+        "image": ""
+    },
+    {
+        "label": "Betery",
+        "image": ""
+    },
+    {
+        "label": "Lotion",
+        "image": ""
+    },
+    {
+        "label": "Sent",
+        "image": ""
+    },
+    {
+        "label": "Body spray",
+        "image": ""
+    },
+    {
+        "label": "Hair spray",
+        "image": ""
+    },
+    {
+        "label": "Body wash",
+        "image": ""
+    },
+    {
+        "label": "Face wash",
+        "image": ""
+    },
+    {
+        "label": "Rollon",
+        "image": ""
+    },
+    {
+        "label": "Ator",
+        "image": ""
+    },
+    {
+        "label": "Powder",
+        "image": ""
+    },
+    {
+        "label": "Glycerine",
+        "image": ""
+    },
+    {
+        "label": "Toothpaste",
+        "image": ""
+    },
+    {
+        "label": "Razor",
+        "image": ""
+    },
+    {
+        "label": "Mehendy",
+        "image": ""
+    },
+    {
+        "label": "Blade",
+        "image": ""
+    },
+    {
+        "label": "Cosmetics",
+        "image": ""
+    },
+    {
+        "label": "Pen",
+        "image": ""
+    },
+    {
+        "label": "Toothbrush",
+        "image": ""
+    },
+    {
+        "label": "Vinegar",
+        "image": ""
+    },
+    {
+        "label": "Olive oil",
+        "image": ""
+    },
+    {
+        "label": "coconut oil",
+        "image": ""
+    },
+    {
+        "label": "Food",
+        "image": ""
+    },
+    {
+        "label": "misry",
+        "image": ""
+    },
+    {
+        "label": "Ghee",
+        "image": ""
+    },
+    {
+        "label": "Honey",
+        "image": ""
+    },
+    {
+        "label": "Jelly",
+        "image": ""
+    },
+    {
+        "label": "Chese",
+        "image": ""
+    },
+    {
+        "label": "Asar",
+        "image": ""
+    },
+    {
+        "label": "Fruit",
+        "image": ""
+    },
+    {
+        "label": "Foam",
+        "image": ""
+    },
+    {
+        "label": "Tri Fragrances",
+        "image": ""
+    },
+    {
+        "label": "RS OLIVE OIL",
+        "image": ""
+    },
+    {
+        "label": "Unibic",
+        "image": ""
+    },
+    {
+        "label": "Bleaching Powder",
+        "image": ""
+    },
+    {
+        "label": "syrup",
+        "image": ""
+    },
+    {
+        "label": "Tala",
+        "image": ""
+    },
+    {
+        "label": "Light",
+        "image": ""
+    },
+    {
+        "label": "Toys",
+        "image": ""
+    }
+]

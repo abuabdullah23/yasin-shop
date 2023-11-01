@@ -130,43 +130,37 @@ const Navbar2nd = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden bg-neutral-800 h-screen w-screen text-neutral-100 absolute lg:static ease-in duration-500 mt-6 p-4  ${
-          open ? "top-[24px] md:top-[24px] left-0" : "left-[-100%]"
-        }`}
+        className={`lg:hidden bg-neutral-800 h-screen w-screen text-neutral-100 absolute lg:static transition-all duration-500 mt-6 p-8 top-6  ${open ? "top-[24px] left-0" : "left-[-100%]"
+          }`}
       >
         <div className="w-full flex flex-col gap-4">
           <Link href="/">
-            <h3 className="text-xl text-white">
+            <h3 onClick={() => setOpen(false)} className="text-xl text-white">
               Yasin<span className="font-bold text-[#24A3B5]">Shop</span>
             </h3>
           </Link>
 
-          <NavbarTop />
-
-          {/* Center Nav Item */}
-          <div className="text-neutral-600">
-            <SearchBox placeholder={"Search Here"} />
-          </div>
+          <NavbarTop setOpen={setOpen} />
 
           {/* Right Nav Item */}
           <div className="flex flex-col gap-4">
-            <Link href="/my-cart" className="flex items-center gap-4">
+            {/* <Link href="/my-cart" className="flex items-center gap-4">
               <CartBadge />
               My Cart
             </Link>
             <Link href="/my-favorite" className="flex items-center gap-4">
               <FavoriteButton />
               My Favorite
-            </Link>
+            </Link> */}
             {user ? (
               <>
                 {/* TODO: Have to dynamic */}
                 <div className="flex items-center gap-4">
-                  <img
+                  {/* <img
                     className="w-8 h-8"
                     src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png"
                     alt="User Photo"
-                  />
+                  /> */}
                   <button className="py-1 px-4 rounded-full border-2 border-[#24A3B5] hover:bg-[#181818] hover:text-white">
                     Logout
                   </button>
@@ -182,6 +176,11 @@ const Navbar2nd = () => {
                 </Link>
               </>
             )}
+
+            {/* Center Nav Item */}
+            <div className="text-neutral-600">
+              <SearchBox placeholder={"Search Here"} />
+            </div>
           </div>
         </div>
       </div>

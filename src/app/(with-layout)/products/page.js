@@ -5,8 +5,8 @@ import React from 'react';
 const ProductsPage = () => {
     return (
         <div>
-           <Slider/> 
-            <Categories/>
+            {/* <Slider /> */}
+            <Categories />
             ProductsPage
         </div>
     );
