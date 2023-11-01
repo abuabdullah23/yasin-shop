@@ -1,6 +1,6 @@
 import Categories from "@/components/Categories/Categories";
 import Slider from "@/components/HomePage/Slider/Slider";
-import ProductsPage from "@/components/Products/Products";
+import ProductsPage from "@/components/ProductsPage/ProductsPage";
 
 const HomePage = () => {
   return (

@@ -1,6 +1,6 @@
 const navItems = [
     { title: 'Home', path: '/' },
-    { title: 'Products', path: '/products' },
+    { title: 'Shop', path: '/shop' },
     { title: 'About', path: '/about' }
 ]
 

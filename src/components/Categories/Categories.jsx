@@ -54,7 +54,7 @@ const Categories = () => {
 
   return (
     <div className="pt-2">
-      <SectionTitle sectionTitle={'Categories'}/>
+      <SectionTitle sectionTitle={'Categories'} />
       <Carousel
         autoPlay={true}
         infinite={true}
@@ -65,9 +65,8 @@ const Categories = () => {
         {categories.map((item, i) => (
           <CategorySingle
             key={i}
-            label={item.label}
-            image={item.image}
-            selected={category === item.label}
+            item={item}
+            selected={category === item.title}
           ></CategorySingle>
         ))}
       </Carousel>
