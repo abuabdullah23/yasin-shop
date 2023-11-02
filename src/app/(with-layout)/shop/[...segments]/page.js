@@ -1,5 +1,11 @@
+"use client"
+
+import { useParams } from "next/navigation";
+
 
 const CategoryProductsPage = () => {
+  const { segments } = useParams();
+  const category = segments[0];
 
   return (
     <div className="h-full">
