@@ -7,7 +7,7 @@ const CategorySingle = ({ item, selected }) => {
   const { title, bn_title, image } = item;
 
   const handleCategoryData = () => {
-    router.push(`/products/${title}`);
+    router.push(`/shop/${title}`);
   };
 
   return (

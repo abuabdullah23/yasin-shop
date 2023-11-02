@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { Range } from 'react-range';
 import Ratings from '../Ratings/Ratings';
 import ProductSlider from './ProductSlider';
-import ShopProducts from './ShopProducts';
 import { getAllCategories } from '@/api/categories';
 import { BsFillGridFill } from 'react-icons/bs';
 import { FaThList } from 'react-icons/fa';
@@ -15,8 +14,6 @@ const AllProductsPage = () => {
     const [rangeState, setRangeState] = useState({ values: [50, 5000] })
     const [styles, setStyles] = useState('grid');
     const [categories, setCategories] = useState([]);
-
-    console.log(filter);
 
     // get categories
     useEffect(() => {
