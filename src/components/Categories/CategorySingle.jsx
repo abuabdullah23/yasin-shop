@@ -4,10 +4,10 @@ import { useRouter } from "next/navigation";
 
 const CategorySingle = ({ item, selected }) => {
   const router = useRouter();
-  const { title, bn_title, image } = item;
+  const { title, slug, bn_title, image } = item;
 
   const handleCategoryData = () => {
-    router.push(`/shop/${title}`);
+    router.push(`/shop/${slug}`);
   };
 
   return (

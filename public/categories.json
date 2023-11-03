@@ -1,476 +1,571 @@
 [
     {
         "title": "Rice",
+        "slug": "rice",
         "bn_title": "চাল",
         "image": "https://i.ibb.co/WNJT1zc/1-rice.webp"
     },
     {
         "title": "Masala",
+        "slug": "masala",
         "bn_title": "মশলা",
         "image": "https://i.ibb.co/VM1wFvL/2-Masala.jpg"
     },
     {
         "title": "Shampoo",
+        "slug": "shampoo",
         "bn_title": "শ্যাম্পু",
         "image": "https://i.ibb.co/N1tJkBN/3-Shampoo.jpg"
     },
     {
         "title": "Detergent Powder",
+        "slug": "detergent-powder",
         "bn_title": "ডিটারজেন্ট পাউডার",
         "image": "https://i.ibb.co/Jst2R83/4-Detergent-Powder.jpg"
     },
     {
         "title": "Bathroom Cleaner",
+        "slug": "bathroom-cleaner",
         "bn_title": "বাথরুম ক্লিনার",
         "image": "https://i.ibb.co/K74Gz2G/5-Bathroom-Cleaner.jpg"
     },
     {
         "title": "Dishwash Powder",
+        "slug": "dishwash-powder",
         "bn_title": "ডিশ পাউডার",
         "image": "https://i.ibb.co/hWt0KjJ/6-Dishwash-Powder.jpg"
     },
     {
         "title": "Dishwash Soap",
+        "slug": "dishwash-soap",
         "bn_title": "ডিশ সাবান",
         "image": "https://i.ibb.co/51xT2fW/7-Dishwash-Soap.jpg"
     },
     {
         "title": "Washing Soap",
+        "slug": "washing-soap",
         "bn_title": "ধোয়া সাবান",
         "image": "https://i.ibb.co/s996zpy/8-Washing-Soap.jpg"
     },
     {
         "title": "Soap",
+        "slug": "soap",
         "bn_title": "সাবান",
         "image": "https://i.ibb.co/hHfRTDy/9-Soap.webp"
     },
     {
         "title": "Baby Soap",
+        "slug": "baby-soap",
         "bn_title": "বাচ্চাদের সাবান",
         "image": "https://i.ibb.co/yPQWx7W/10-Baby-Soap.webp"
     },
     {
         "title": "Coil",
+        "slug": "coil",
         "bn_title": "কয়েল",
         "image": "https://i.ibb.co/mHkFKxc/11-Coil.jpg"
     },
     {
         "title": "Diaper",
+        "slug": "diaper",
         "bn_title": "ডায়পার",
         "image": "https://i.ibb.co/vxpsp9f/12-Diaper.jpg"
     },
     {
         "title": "Baby Wipes",
+        "slug": "baby-wipes",
         "bn_title": "ভেজা টিসু",
         "image": "https://i.ibb.co/L6DV3dX/13-Baby-Wipes.jpg"
     },
     {
         "title": "Sanitary Napkin",
+        "slug": "sanitary-napkin",
         "bn_title": "স্যানিটারি ন্যাপকিন",
         "image": "https://i.ibb.co/0Jkp7GT/14-Sanitary-Napkin.jpg"
     },
     {
         "title": "Toilet Brush",
+        "slug": "toilet-brush",
         "bn_title": "টয়লেট ব্রাশ",
         "image": "https://i.ibb.co/92Dw4rP/15-Toilet-Brush.jpg"
     },
     {
         "title": "Bathroom Brush",
+        "slug": "bathroom-brush",
         "bn_title": "গোসলখানার ব্রাশ",
         "image": "https://i.ibb.co/VW3pS2M/16-Bathroom-Brush.webp"
     },
     {
         "title": "Noodles",
+        "slug": "noodles",
         "bn_title": "নুডলস",
         "image": "https://i.ibb.co/McpbfvQ/17-Noodles.jpg"
     },
     {
         "title": "Green Tea",
+        "slug": "green-tea",
         "bn_title": "সবুজ চা",
         "image": "https://i.ibb.co/kcxFhHN/18-Green-Tea.jpg"
     },
     {
         "title": "Liquid Dishwash",
+        "slug": "liquid-dishwash",
         "bn_title": "তরল ডিশওয়াস",
         "image": "https://i.ibb.co/nBLGW8J/19-Liquid-Dishwash.webp"
     },
     {
         "title": "Floor Cleaner",
+        "slug": "floor-cleaner",
         "bn_title": "মেঝে ক্লিনার",
         "image": "https://i.ibb.co/k0bDJ7B/20-Floor-Cleaner.webp"
     },
     {
         "title": "Hand Wash",
+        "slug": "hand-wash",
         "bn_title": "হ্যান্ড ওয়াশ",
         "image": "https://i.ibb.co/9sFVMP8/21-Hand-Wash.jpg"
     },
     {
         "title": "Antiseptic Liquid",
+        "slug": "antiseptic-liquid",
         "bn_title": "জিবানুুমুক্তকারী",
         "image": "https://i.ibb.co/rfk6fdc/22-Antiseptic-Liquid.jpg"
     },
     {
         "title": "Liquid Detergent",
+        "slug": "liquid-detergent",
         "bn_title": "তরল ডিটারজেন্ট",
         "image": "https://i.ibb.co/3YMkxxD/23-Liquid-Detergent.jpg"
     },
     {
         "title": "Glass Cleaner",
+        "slug": "glass-cleaner",
         "bn_title": "কাঁচ ক্লিনার",
         "image": "https://i.ibb.co/G2H4y9K/24-Glass-Cleaner.jpg"
     },
     {
         "title": "Toilet Cleaner",
+        "slug": "toilet-cleaner",
         "bn_title": "টয়লেট ক্লিনার",
         "image": "https://i.ibb.co/K74Gz2G/5-Bathroom-Cleaner.jpg"
     },
     {
         "title": "Insect Spray",
+        "slug": "insect-spray",
         "bn_title": "পোকা-মাকড় স্প্রে",
         "image": "https://i.ibb.co/X8nz5s1/25-Insect-Spray.webp"
     },
     {
         "title": "Moshla",
+        "slug": "moshla",
         "bn_title": "মশলা",
         "image": "https://i.ibb.co/Y7RLFLW/26-Moshla.jpg"
     },
     {
         "title": "Mix Product",
+        "slug": "mix-product",
         "bn_title": "মিক্সড পন্য",
         "image": "https://i.ibb.co/xDYW1f1/27-Mix-Product.jpg"
     },
     {
         "title": "Salt",
+        "slug": "salt",
         "bn_title": "লবণ",
         "image": "https://i.ibb.co/6PK43dK/28-Salt.webp"
     },
     {
         "title": "Dates",
+        "slug": "dates",
         "bn_title": "খেজুর",
         "image": " https://i.ibb.co/5xfXGSR/29-Dates.jpg"
     },
     {
         "title": "Chocolate",
+        "slug": "chocolate",
         "bn_title": "চকলেট",
         "image": "https://i.ibb.co/y872Lp4/30-Chocolate.jpg"
     },
     {
         "title": "Badam",
+        "slug": "badam",
         "bn_title": "বাদাম",
         "image": "https://i.ibb.co/r4pdWbX/31-Badam.jpg"
     },
     {
         "title": "Atta",
+        "slug": "atta",
         "bn_title": "আটা",
         "image": "https://i.ibb.co/XJQ01LP/32-Atta.webp"
     },
     {
         "title": "Tea",
+        "slug": "tea",
         "bn_title": "চা",
         "image": " https://i.ibb.co/rFXxXXh/33-Tea.webp"
     },
     {
         "title": "Muri",
+        "slug": "muri",
         "bn_title": "মুড়ি",
         "image": "https://i.ibb.co/Fs6WzYQ/34-Muri.webp"
     },
     {
         "title": "Cake",
+        "slug": "cake",
         "bn_title": "কেক",
         "image": "https://i.ibb.co/fDq2bSD/35-Cake.webp"
     },
     {
         "title": "Biscuit",
+        "slug": "biscuit",
         "bn_title": "বিস্কিট",
         "image": "https://i.ibb.co/hcywtmF/36-Biscuit.jpg"
     },
     {
         "title": "Chanachur",
+        "slug": "chanachur",
         "bn_title": "চানাচুর",
         "image": "https://i.ibb.co/4Z9XYcY/37-Chanachur.jpg"
     },
     {
         "title": "Oil",
+        "slug": "oil",
         "bn_title": "তেল",
         "image": "https://i.ibb.co/MZw8VTb/38-oil.jpg"
     },
     {
         "title": "Sugar",
+        "slug": "sugar",
         "bn_title": "চিনি",
         "image": "https://i.ibb.co/h238fLv/39-Sugar.jpg"
     },
     {
         "title": "Chips",
+        "slug": "chips",
         "bn_title": "চিপস",
         "image": "https://i.ibb.co/RjGtt8W/40-Chips.jpg"
     },
     {
         "title": "Milk",
+        "slug": "milk",
         "bn_title": "দুধ",
         "image": "https://i.ibb.co/x6KWxYJ/41-Milk.jpg"
     },
     {
         "title": "Horlicks",
+        "slug": "horlicks",
         "bn_title": "হরলেক্স",
         "image": "https://i.ibb.co/Wp1xzrX/42-Horlicks.jpg"
     },
     {
         "title": "Juice",
+        "slug": "juice",
         "bn_title": "জুস",
         "image": "https://i.ibb.co/mD8ZhKt/43-Juice.webp"
     },
     {
         "title": "Cold Drinks",
+        "slug": "cold-drinks",
         "bn_title": "কোমল পানিয়",
         "image": "https://i.ibb.co/GHy8R2G/44-Cold-Drinks.jpg"
     },
     {
         "title": "Water",
+        "slug": "water",
         "bn_title": "পানি",
         "image": "https://i.ibb.co/PN1nGKJ/45-Water.jpg"
     },
     {
         "title": "Ice Cream",
+        "slug": "ice-cream",
         "bn_title": "আইসক্রিম",
         "image": "https://i.ibb.co/wM6mBv3/46-Ice-Cream.jpg"
     },
     {
         "title": "Frozen",
+        "slug": "frozen",
         "bn_title": "বরফ",
         "image": "https://i.ibb.co/Vg4h3YC/47-Frozen.jpg"
     },
     {
         "title": "Tissue",
+        "slug": "tissue",
         "bn_title": "টিসু",
         "image": "https://i.ibb.co/bPmXNBR/48-Tissue.webp"
     },
     {
         "title": "Feeder",
+        "slug": "feeder",
         "bn_title": "ফিডার",
         "image": "https://i.ibb.co/smZHjN0/49-Feeder.jpg"
     },
     {
         "title": "Mask",
+        "slug": "mask",
         "bn_title": "মাস্ক",
         "image": "https://i.ibb.co/cDkVmGP/50-Mask.jpg"
     },
     {
         "title": "Pampers",
+        "slug": "pampers",
         "bn_title": "প্যাম্পরস",
         "image": "https://i.ibb.co/zQK5r32/51-Pampers.jpg"
     },
     {
         "title": "Coffee",
+        "slug": "coffee",
         "bn_title": "কফি",
         "image": "https://i.ibb.co/W2HGL8h/52-Coffee.webp"
     },
     {
         "title": "Sauce",
+        "slug": "sauce",
         "bn_title": "সস",
         "image": "https://i.ibb.co/vxNKJvD/53-Sauce.jpg"
     },
     {
         "title": "Cream",
+        "slug": "cream",
         "bn_title": "ক্রীম",
         "image": "https://i.ibb.co/FmLv2km/54-Cream.jpg"
     },
     {
         "title": "Room Spray",
+        "slug": "room-spray",
         "bn_title": "রুম স্প্রে",
         "image": "https://i.ibb.co/tp9b1nn/55-Room-Spray.webp"
     },
     {
         "title": "Scissor",
+        "slug": "scissor",
         "bn_title": "কাঁচি",
         "image": "https://i.ibb.co/B2swwS9/55-Scissor.jpg"
     },
     {
         "title": "Battery",
+        "slug": "battery",
         "bn_title": "ব্যাটারি",
         "image": "https://i.ibb.co/mJwWXbL/56-Battery.jpg"
     },
     {
         "title": "Lotion",
+        "slug": "lotion",
         "bn_title": "লোশন",
         "image": "https://i.ibb.co/hXYDLg7/57-Lotion.jpg"
     },
     {
         "title": "Perfume",
+        "slug": "perfume",
         "bn_title": "পারফিউম",
         "image": "https://i.ibb.co/8NMdpDt/58-Perfume.jpg"
     },
     {
         "title": "Body Spray",
+        "slug": "body-spray",
         "bn_title": "বডি স্প্রে",
         "image": "https://i.ibb.co/HXS5JtP/59-Body-Spray.webp"
     },
     {
         "title": "Hair Spray",
+        "slug": "hair-spray",
         "bn_title": "হেয়ার স্প্রে",
         "image": "https://i.ibb.co/4fRshtp/60-Hair-Spray.jpg"
     },
     {
         "title": "Body Wash",
+        "slug": "body-wash",
         "bn_title": "বডি ওয়াশ",
         "image": "https://i.ibb.co/mhDJ5Fc/61-Body-Wash.webp"
     },
     {
         "title": "Face Wash",
+        "slug": "face-wash",
         "bn_title": "ফেস ওয়াশ",
         "image": "https://i.ibb.co/3h6jXzG/62-Face-wash.webp"
     },
     {
         "title": "Rollon",
+        "slug": "rollon",
         "bn_title": "রোলন",
         "image": "https://i.ibb.co/ZVtTsHh/63-Rollon.webp"
     },
     {
         "title": "Ator",
+        "slug": "ator",
         "bn_title": "আতর",
         "image": "https://i.ibb.co/chgbnwR/64-Ator.jpg"
     },
     {
         "title": "Powder",
+        "slug": "powder",
         "bn_title": "পাউডার",
         "image": "https://i.ibb.co/V9LWMcF/65-Powder.jpg"
     },
     {
         "title": "Glycerine",
+        "slug": "glycerine",
         "bn_title": "গ্লিসারিন",
         "image": "https://i.ibb.co/mJgjJnY/66-Glycerine.webp"
     },
     {
         "title": "Toothpaste",
+        "slug": "toothpaste",
         "bn_title": "টুথ পেস্ট",
         "image": "https://i.ibb.co/XWMSh2t/67-Toothpaste.webp"
     },
     {
         "title": "Razor",
+        "slug": "razor",
         "bn_title": "রেজার",
         "image": "https://i.ibb.co/hC6hMTH/68-Razor.webp"
     },
     {
         "title": "Mehendy",
+        "slug": "mehendy",
         "bn_title": "মেহেদী",
         "image": "https://i.ibb.co/VTLfZ8g/69-Mehendy.jpg"
     },
     {
         "title": "Blade",
+        "slug": "blade",
         "bn_title": "ব্লেড",
         "image": "https://i.ibb.co/0fT2q0Z/70-Blade.jpg"
     },
     {
         "title": "Cosmetics",
+        "slug": "cosmetics",
         "bn_title": "প্রসাধুনি",
         "image": "https://i.ibb.co/LJh9JQL/71-Cosmetics.jpg"
     },
     {
         "title": "Pen",
+        "slug": "pen",
         "bn_title": "কলম",
         "image": "https://i.ibb.co/YR9qkp5/72-Pen.webp"
     },
     {
         "title": "Toothbrush",
+        "slug": "toothbrush",
         "bn_title": "টুথ ব্রাশ",
         "image": "https://i.ibb.co/0VQcCSY/73-Toothbrush.webp"
     },
     {
         "title": "Vinegar",
+        "slug": "vinegar",
         "bn_title": "ভিনেগার",
         "image": "https://i.ibb.co/jHthd8K/74-Vinegar.webp"
     },
     {
         "title": "Olive Oil",
+        "slug": "olive-oil",
         "bn_title": "জয়তুন তেল",
         "image": "https://i.ibb.co/F3rCQTV/75-Olive-Oil.webp"
     },
     {
         "title": "Coconut Oil",
+        "slug": "coconut-oil",
         "bn_title": "নাড়িকেল তেল",
         "image": "https://i.ibb.co/QvKx7p0/76-Coconut-Oil.webp"
     },
     {
         "title": "Food",
+        "slug": "food",
         "bn_title": "খাবার",
         "image": "https://i.ibb.co/KGnTsCg/77-Food.jpg"
     },
     {
         "title": "Misry",
+        "slug": "misry",
         "bn_title": "মিসরি",
         "image": "https://i.ibb.co/HPCMMfr/78-Misry.jpg"
     },
     {
         "title": "Ghee",
+        "slug": "ghee",
         "bn_title": "ঘি",
         "image": "https://i.ibb.co/jLHbzBf/79-Ghee.jpg"
     },
     {
         "title": "Honey",
+        "slug": "honey",
         "bn_title": "মধু",
         "image": "https://i.ibb.co/KhxdY5P/80-Honey.webp"
     },
     {
         "title": "Jelly",
+        "slug": "jelly",
         "bn_title": "জেলি",
         "image": "https://i.ibb.co/fFpRyhZ/81-Jelly.jpg"
     },
     {
         "title": "Chess",
+        "slug": "chess",
         "bn_title": "দাবা",
         "image": "https://i.ibb.co/9wpLTVG/82-Chess.jpg"
     },
     {
         "title": "Achar",
+        "slug": "achar",
         "bn_title": "আচার",
         "image": "https://i.ibb.co/187qq8c/83-Achar.jpg"
     },
     {
         "title": "Fruit",
+        "slug": "fruit",
         "bn_title": "ফল-মূল",
         "image": "https://i.ibb.co/SrmDMt5/84-Fruit.jpg"
     },
     {
         "title": "Foam",
+        "slug": "foam",
         "bn_title": "ফোম",
         "image": "https://i.ibb.co/wBDchQC/85-Foam.webp"
     },
     {
         "title": "Tri Fragrances",
+        "slug": "tri-fragrances",
         "bn_title": "ত্রি সুগন্ধি",
         "image": "https://i.ibb.co/VYQWwqx/86-Tri-Fragrances.jpg"
     },
     {
         "title": "RS Olive Oil",
+        "slug": "rs-olive-oil",
         "bn_title": "আর এস অলিভ অয়েল",
         "image": "https://i.ibb.co/vY94vPk/87-RS-Olive-Oil.jpg"
     },
     {
         "title": "Unibic",
+        "slug": "unibic",
         "bn_title": "ইউনিবিক",
         "image": "https://i.ibb.co/HN1Mf4q/88-Unibic.jpg"
     },
     {
         "title": "Bleaching Powder",
+        "slug": "bleaching-powder",
         "bn_title": "ব্লিচিং পাউডার",
         "image": "https://i.ibb.co/ZXVYNC9/89-Bleaching-Powder.jpg"
     },
     {
         "title": "Syrup",
+        "slug": "syrup",
         "bn_title": "সিরাপ",
         "image": "https://i.ibb.co/MgPrQcy/90-Syrup.jpg"
     },
     {
         "title": "Tala",
+        "slug": "tala",
         "bn_title": "তালা",
         "image": "https://i.ibb.co/tX8jH4z/91-Tala.jpg"
     },
     {
         "title": "Light",
+        "slug": "light",
         "bn_title": "বাল্ব",
         "image": "https://i.ibb.co/RDJLs3g/92-Light.jpg"
     },
     {
         "title": "Toys",
+        "slug": "toys",
         "bn_title": "খেলনা",
         "image": "https://i.ibb.co/wrnW3ry/93-Toys.webp"
     }
