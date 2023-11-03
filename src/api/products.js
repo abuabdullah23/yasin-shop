@@ -1,3 +1,15 @@
+// Add a new product
+export const addProduct = async (productInfo) => {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/add-product`, {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json',
+        },
+        body: JSON.stringify(productInfo),
+    })
+    const data = await response.json()
+    return data;
+}
 
 
 // get all products
