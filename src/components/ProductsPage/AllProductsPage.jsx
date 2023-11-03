@@ -8,18 +8,28 @@ import { getAllCategories } from '@/api/categories';
 import { BsFillGridFill } from 'react-icons/bs';
 import { FaThList } from 'react-icons/fa';
 import ProductsCard from './ProductsCard';
+import { getAllProducts } from '@/api/products';
 
 const AllProductsPage = () => {
     const [filter, setFilter] = useState(false);
     const [rangeState, setRangeState] = useState({ values: [50, 5000] })
     const [styles, setStyles] = useState('grid');
     const [categories, setCategories] = useState([]);
+    const [products, setProducts] = useState([]);
 
     // get categories
     useEffect(() => {
         getAllCategories()
             .then(data => {
                 setCategories(data)
+            })
+    }, []);
+
+    // get all products
+    useEffect(() => {
+        getAllProducts()
+            .then(data => {
+                setProducts(data)
             })
     }, []);
 
@@ -129,7 +139,7 @@ const AllProductsPage = () => {
                             <div className='pb-8'>
                                 <div className={`w-full grid gap-4 grid-cols-1 ${styles === 'grid' ? 'md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
                                     {
-                                        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((p, i) => <ProductsCard styles={styles} key={i} product={p} />)
+                                        products.map((product, i) => <ProductsCard styles={styles} key={i} product={product} />)
                                     }
                                 </div>
                             </div>

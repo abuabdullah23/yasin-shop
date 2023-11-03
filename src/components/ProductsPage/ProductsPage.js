@@ -1,17 +1,32 @@
 "use client"
 
+import { getAllProducts } from "@/api/products";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import ProductSlider from "./ProductSlider";
 import ProductsCard from "./ProductsCard";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const ProductsPage = () => {
+
+  const [products, setProducts] = useState([]);
+
+  // get all products
+  useEffect(() => {
+    getAllProducts()
+      .then(data => {
+        setProducts(data)
+      })
+  }, []);
+
+
   return <div className='w-[100%] flex flex-wrap mx-auto my-12'>
     <div className="w-full">
       <SectionTitle sectionTitle={'Feature Products'} />
 
       <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
         {
-          [1, 2, 3, 4, 5, 6, 7].map((product, i) =>
+          products.map((product, i) =>
             <ProductsCard
               key={i}
               product={product}
