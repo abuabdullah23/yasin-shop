@@ -158,10 +158,10 @@ const AddProduct = () => {
 
     return (
         <div>
-            <div className='w-full p-4 bg-[#283046] rounded-md'>
+            <div className='w-full p-4 bg-slate-50 rounded-md'>
                 <div className='flex justify-between items-center pb-4'>
                     <h2 className='text-xl font-semibold'>Add Products</h2>
-                    <Link className='bg-blue-500 hover:shadow-blue-500/50 hover:shadow-lg rounded-sm px-7 py-2 my-2' href='/dashboard/all-products'>
+                    <Link className='bg-slate-500 hover:shadow-slate-500/50 hover:shadow-lg rounded-sm px-7 py-2 my-2 text-white' href='/dashboard/all-products'>
                         All Products
                     </Link>
                 </div>
@@ -171,11 +171,11 @@ const AddProduct = () => {
                         <div className='flex flex-col md:flex-row gap-4 w-full mb-4'>
                             <div className='flex flex-col w-full gap-1'>
                                 <label htmlFor="name">Product name</label>
-                                <input required className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-[#283046] rounded-md text-[#d0d2d6]' name='name' type="text" placeholder='product name' />
+                                <input required className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-slate-100 rounded-md text-slate-600' name='name' type="text" placeholder='product name' />
                             </div>
                             <div className='flex flex-col w-full gap-1'>
                                 <label htmlFor="brand">Product brand</label>
-                                <input required className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-[#283046] rounded-md text-[#d0d2d6]' name='brand' type="text" placeholder='product brand' />
+                                <input required className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-slate-100 rounded-md text-slate-600' name='brand' type="text" placeholder='product brand' />
                             </div>
                         </div>
 
@@ -183,10 +183,10 @@ const AddProduct = () => {
                             {/* select category option */}
                             <div className='flex flex-col w-full gap-1 relative'>
                                 <label htmlFor="category">Category</label>
-                                <input required readOnly value={category} onClick={() => setCatShow(!catShow)} className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-[#283046] rounded-md text-[#d0d2d6]' id='category' placeholder='--select category--' type="text" name='category' />
+                                <input required readOnly value={category} onClick={() => setCatShow(!catShow)} className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-slate-100 rounded-md text-slate-600' id='category' placeholder='--select category--' type="text" name='category' />
                                 <div className={`absolute top-[101%] bg-slate-800 w-full transition-all z-20 ${catShow ? 'scale-100' : 'scale-0'}`}>
                                     <div className='w-full px-4 py-2 fixed'>
-                                        <input value={searchValue} onChange={categorySearch} className='w-full px-3 py-1 border border-slate-700 focus:border-indigo-500 outline-none bg-transparent rounded-md text-[#d0d2d6] overflow-hidden' type="text" placeholder='search' />
+                                        <input value={searchValue} onChange={categorySearch} className='w-full px-3 py-1 border border-slate-700 focus:border-indigo-500 outline-none bg-transparent rounded-md text-slate-600 overflow-hidden' type="text" placeholder='search' />
                                     </div>
                                     <div className='pt-14'></div>
                                     <div className='flex justify-start items-start flex-col h-[200px] overflow-y-scroll'>
@@ -207,31 +207,31 @@ const AddProduct = () => {
                             </div>
                             <div className='flex flex-col w-full gap-1'>
                                 <label htmlFor="stock">Stock</label>
-                                <input required className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-[#283046] rounded-md text-[#d0d2d6]' name='stock' type="number" placeholder='stock' min={0} />
+                                <input required className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-slate-100 rounded-md text-slate-600' name='stock' type="number" placeholder='stock' min={0} />
                             </div>
                         </div>
 
                         <div className='flex flex-col md:flex-row gap-4 w-full mb-4'>
                             <div className='flex flex-col w-full gap-1'>
                                 <label htmlFor="price">Price</label>
-                                <input required className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-[#283046] rounded-md text-[#d0d2d6]' name='price' type="number" min={0} placeholder='Price' />
+                                <input required className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-slate-100 rounded-md text-slate-600' name='price' type="number" min={0} placeholder='Price ৳' />
                             </div>
                             <div className='flex flex-col w-full gap-1'>
                                 <label htmlFor="discount">discount</label>
-                                <input className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-[#283046] rounded-md text-[#d0d2d6]' name='discount' type="number" min={0} placeholder='%discount%' />
+                                <input className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-slate-100 rounded-md text-slate-600' name='discount' type="number" min={0} placeholder='%discount%' />
                             </div>
                         </div>
 
                         <div className='flex flex-col md:flex-row gap-4 w-full mb-4'>
                             <div className='flex flex-col w-full gap-1'>
                                 <label htmlFor="description">Description</label>
-                                <textarea required onChange={handleAreaHeight} className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-[#283046] rounded-md text-[#d0d2d6] overflow-hidden' name='description' type="text" min={0} placeholder='Description' />
+                                <textarea required onChange={handleAreaHeight} className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-slate-100 rounded-md text-slate-600 overflow-hidden' name='description' type="text" min={0} placeholder='Description' />
                             </div>
                         </div>
 
                         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 xs:gap-4 md:gap-4 w-full mb-4'>
                             {
-                                imageShow.map((img, i) => <div className='h-[180px] relative' key={i}>
+                                imageShow.map((img, i) => <div className='h-[180px] relative border border-slate-300' key={i}>
                                     <label htmlFor={i}>
                                         <img className='w-full h-full rounded-sm object-cover' src={img.url} alt="" />
                                     </label>
@@ -239,7 +239,7 @@ const AddProduct = () => {
                                     <span onClick={() => removeImage(i)} className='p-2 z-10 cursor-pointer bg-red-600 hover:shadow-lg hover:shadow-red-500/50 text-white absolute top-1 right-1 rounded-full'><IoCloseSharp /></span>
                                 </div>)
                             }
-                            <label htmlFor="image" className='flex flex-col justify-center items-center h-[180px] cursor-pointer border border-dashed w-full hover:border-indigo-500 border-[#d0d2d6] rounded-sm'>
+                            <label htmlFor="image" className='flex flex-col justify-center items-center h-[180px] cursor-pointer border border-dashed w-full hover:border-indigo-500 border-slate-600 rounded-sm'>
                                 <span><BsImages /></span>
                                 <span>select image</span>
                             </label>
@@ -249,7 +249,7 @@ const AddProduct = () => {
                         <button
                             disabled={loader ? true : false}
                             type="submit"
-                            className={`py-2 px-4 w-fit bg-blue-500 hover:shadow-blue-500/20 hover:shadow-lg text-white rounded-md mb-3 ${loader && 'bg-blue-400'} `}>
+                            className={`py-2 px-4 w-fit bg-slate-500 hover:shadow-slate-500/20 hover:shadow-lg text-white rounded-md mb-3 ${loader && 'bg-slate-400'} `}>
                             {
                                 loader ? <Loader loadingText={'Adding Product...'} /> : 'Add Product'
                             }
