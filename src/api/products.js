@@ -24,6 +24,18 @@ export const getAllProducts = async () => {
     }
 }
 
+// get single products for details by id
+export const getSingleProduct = async (id) => {
+    try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/product-details/${id}`)
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching product for details:', error);
+        return [];
+    }
+}
+
 // get category wise products
 export const getCategoryProducts = async (slug) => {
     try {

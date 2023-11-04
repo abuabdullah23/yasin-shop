@@ -17,7 +17,7 @@ const ProductsCard = ({ product, styles }) => {
 
                 <ul className='flex justify-center items-center gap-2 transition-all duration-500 absolute -bottom-10 group-hover:bottom-3 w-full'>
                     <li className='w-[38px] h-[38px] rounded-full cursor-pointer flex justify-center items-center bg-gray-100 hover:bg-cyan-500 hover:text-white hover:rotate-[360deg] transition-all duration-500'><AiFillHeart /></li>
-                    <Link href={`/product-details/123`} className='w-[38px] h-[38px] rounded-full cursor-pointer flex justify-center items-center bg-gray-100 hover:bg-cyan-500 hover:text-white hover:rotate-[360deg] transition-all duration-500'><FaEye /></Link>
+                    <Link href={`/product-details/${_id}`} className='w-[38px] h-[38px] rounded-full cursor-pointer flex justify-center items-center bg-gray-100 hover:bg-cyan-500 hover:text-white hover:rotate-[360deg] transition-all duration-500'><FaEye /></Link>
                     <li className='w-[38px] h-[38px] rounded-full cursor-pointer flex justify-center items-center bg-gray-100 hover:bg-cyan-500 hover:text-white hover:rotate-[360deg] transition-all duration-500'><AiOutlineShoppingCart /></li>
                 </ul>
             </div>
@@ -33,9 +33,9 @@ const ProductsCard = ({ product, styles }) => {
                     {/* <p className='text-base font-semibold text-slate-400'>(400 sell)</p> */}
                 </div>
                 <div className='flex justify-start items-center gap-3 text-lg'>
-                    <span className='font-semibold'>৳{price}</span>
+                    <span className='font-semibold'>৳ {price - Math.floor((price * discount) / 100)}</span>
                     {
-                        discount && <span className='line-through text-slate-400'>৳{price}</span>
+                        discount && <span className='line-through text-slate-400'>৳ {price}</span>
                     }
                     {
                         discount && <span className='py-[2px] px-2 rounded-md bg-red-500 text-gray-100 text-base'>{discount}% Off</span>

@@ -3,7 +3,7 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AiFillGithub, AiFillHeart, AiOutlineTwitter } from 'react-icons/ai';
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { HiShoppingBag } from 'react-icons/hi2';
@@ -22,14 +22,24 @@ import img2 from '../../../public/images/products/2.webp'
 import img5 from '../../../public/images/products/5.webp'
 import img6 from '../../../public/images/products/6.webp'
 import img7 from '../../../public/images/products/7.webp'
+import { useParams } from 'next/navigation';
+import { getSingleProduct } from '@/api/products';
 
 
 const ProductDetails = () => {
-    const [image, setImage] = useState('');
-    const images = [img1, img2, img3, img4, img5, img6, img7];
-    const discount = 11;
-    const stock = 5;
+    const [imageLink, setImageLink] = useState('');
     const [state, setState] = useState('');
+    const { id } = useParams();
+    const productId = id[0];
+    const [product, setProduct] = useState([]);
+    const { _id, name, category, slug, price, description, image, stock, discount } = product;
+
+    // get single product for details
+    useEffect(() => {
+        getSingleProduct(productId)
+            .then(data => setProduct(data))
+    }, [productId])
+
 
     const responsive = {
         superLargeDesktop: {
@@ -70,9 +80,11 @@ const ProductDetails = () => {
                     <div className='flex justify-start items-center text-base text-slate-600  w-full'>
                         <Link href='/'>Home</Link>
                         <span className='mt-1'><MdOutlineKeyboardArrowRight /></span>
-                        <span>Category Name</span>
+                        <Link href='/shop'>Shop</Link>
                         <span className='mt-1'><MdOutlineKeyboardArrowRight /></span>
-                        <span>Products Name</span>
+                        <Link href={`/shop/${slug}`} className='text-red-500'>{category}</Link>
+                        <span className='mt-1'><MdOutlineKeyboardArrowRight /></span>
+                        <span className='text-cyan-600'>{name}</span>
                     </div>
                 </div>
             </section>
@@ -81,22 +93,21 @@ const ProductDetails = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                     {/* show product images section */}
                     <div>
-                        <div className='p-4 border'>
-                            <img className='h-[240px] lg:h-[460px] w-full object-contain' src={image ? image.src : images[1].src} alt="product image" />
-
+                        <div className='p-4 border mb-3'>
+                            <img className='h-[240px] lg:h-[360px] w-full object-contain' src={imageLink ? imageLink : image} alt="product image" />
                         </div>
-                        <div className='py-4'>
-                            {images && <Carousel
+                        <div className='border'>
+                            {image && <Carousel
                                 autoPlay={true}
                                 infinite={true}
                                 responsive={responsive}
                                 transitionDuration={500}
                             >
-                                {images.map((img, i) => <div
-                                    onClick={() => setImage(img)}
+                                {image.map((img, i) => <div
+                                    onClick={() => setImageLink(img)}
                                     key={i}
                                 >
-                                    <img className='cursor-pointer hover:border-2 border-cyan-400' src={img.src} alt="product image" />
+                                    <img className='cursor-pointer h-full object-cover hover:border-2 border-cyan-400' src={img} alt="product image" />
                                 </div>)
                                 }
                             </Carousel>
@@ -107,7 +118,7 @@ const ProductDetails = () => {
                     {/* details */}
                     <div className='flex flex-col gap-5'>
                         <div className='text-3xl font-bold text-slate-600 '>
-                            <h2>Long Sleeve casual shirt for Man</h2>
+                            <h2>{name}</h2>
                         </div>
                         {/* <div className='flex justify-start items-center gap-4'>
                             <div className='flex text-xl'>
@@ -117,12 +128,12 @@ const ProductDetails = () => {
                         </div> */}
                         <div className='text-2xl text-red-500 font-bold flex gap-3'>
                             {discount ? <>
-                                <h2 className='line-through text-slate-500'>$500</h2>
-                                <h2>${500 - Math.floor((500 * discount) / 100)} (-{discount}%)</h2>
-                            </> : <h2>Price: $500</h2>}
+                                <h2 className='line-through text-slate-500'>৳{price}</h2>
+                                <h2>৳ {price - Math.floor((price * discount) / 100)} (-{discount}%)</h2>
+                            </> : <h2>Price: ৳{price}</h2>}
                         </div>
                         <div className='text-slate-600 '>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo doloribus iste laboriosam necessitatibus in pariatur. Necessitatibus exercitationem optio quod quam repudiandae, sed deleniti expedita consequatur excepturi consectetur eum dicta odio esse nostrum molestiae quaerat inventore eaque asperiores minus saepe ea delectus reiciendis odit nesciunt! Atque laboriosam voluptatibus facilis sit neque.</p>
+                            <p>{description}</p>
                         </div>
                         <div className='flex gap-3 pb-8 border-b'>
                             {
@@ -182,7 +193,7 @@ const ProductDetails = () => {
                         </div>
                         <div>
                             {
-                                state === 'reviews' ? <Reviews /> : <div className='py-5 text-slate-700 '>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non eligendi quam dolores, quisquam facere placeat delectus consectetur maxime ipsa. Laboriosam, delectus porro corrupti, error dicta consectetur molestiae deserunt provident voluptatem, illum reprehenderit officiis odio! Doloribus, laudantium. Delectus quas eveniet recusandae.</div>
+                                state === 'reviews' ? <Reviews /> : <div className='py-5 text-slate-700 '>{description}</div>
                             }
                         </div>
                     </div>
