@@ -7,6 +7,7 @@ import { getAllCategories } from "@/api/categories";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import SectionTitle from "../SectionTitle/SectionTitle";
+import Link from "next/link";
 
 const Categories = () => {
   const pathName = usePathname();
@@ -55,23 +56,31 @@ const Categories = () => {
   return (
     <div className="pt-2">
       <SectionTitle sectionTitle={'Categories'} />
-      <Carousel
-        autoPlay={true}
-        infinite={true}
-        arrows={true}
-        responsive={responsive}
-        transitionDuration={500}
-      >
-        {categories.map((item, i) => (
-          <CategorySingle
-            key={i}
-            item={item}
-            selected={category === item.title}
-          ></CategorySingle>
-        ))}
-      </Carousel>
-
-
+      {
+        categories?.length > 0
+          ? <><Carousel
+            autoPlay={true}
+            infinite={true}
+            arrows={true}
+            responsive={responsive}
+            transitionDuration={500}
+          >
+            {categories.map((item, i) => (
+              <CategorySingle
+                key={i}
+                item={item}
+                selected={category === item.title}
+              ></CategorySingle>
+            ))}
+          </Carousel></>
+          :
+          <div className="flex items-center justify-center py-3 border-2">
+            <div className="text-center flex flex-col items-center gap-3">
+              <p>Categories Not Found! Server Error!</p>
+              <Link href='/shop' className='py-2 px-4 rounded-md bg-slate-200 hover:bg-slate-300 w-fit'>Go to shop</Link>
+            </div>
+          </div>
+      }
     </div>
   );
 };

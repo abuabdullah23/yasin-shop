@@ -22,7 +22,6 @@ const CategoryProductsPage = () => {
   return (
     <div className="py-16">
 
-
       {products.length > 0 ? (
         <>
           <SectionTitle sectionTitle={`${slug.split('-').join(' ').toLocaleUpperCase()} Products`} />
@@ -39,8 +38,8 @@ const CategoryProductsPage = () => {
         </>
       ) : (
         <div className="h-[calc(100vh-200px)] flex items-center justify-center">
-          <div className="flex flex-col items-center gap-3">
-            <p className="text-lg font-semibold text-center">No products available in this category</p>
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-2xl text-red-500 font-semibold text-center">No products available in this category</p>
             <Link href={'/'} className="w-fit py-2 px-5 rounded-md bg-gray-700 text-white hover:bg-gray-600">Back to Home</Link>
           </div>
         </div>

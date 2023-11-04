@@ -46,14 +46,20 @@ const AllProductsPage = () => {
                             {/* show category wise products */}
                             <div>
                                 <h2 className='text-3xl font-bold mb-3'>Category</h2>
-                                <div className='py-4 h-[400px] overflow-y-auto'>
-                                    {
-                                        categories.map((c, i) => <div key={i} className='flex justify-start items-center gap-2 py-1'>
-                                            <input type="checkbox" name="" id={c.title} />
-                                            <label className='block cursor-pointer' htmlFor={c.title}>{c.title}</label>
-                                        </div>)
-                                    }
-                                </div>
+                                {
+                                    categories?.length > 0 ?
+                                        <div className='py-4 h-[400px] overflow-y-auto'>
+                                            {
+                                                categories?.map((c, i) => <div key={i} className='flex justify-start items-center gap-2 py-1'>
+                                                    <input type="checkbox" name="" id={c.title} />
+                                                    <label className='block cursor-pointer' htmlFor={c.title}>{c.title}</label>
+                                                </div>)
+                                            }
+                                        </div> :
+                                        <div className='py-4 h-[400px] w-full flex items-center justify-center border-2'>
+                                            <p>Categories Not Found!</p>
+                                        </div>
+                                }
                             </div>
 
                             {/* range tracking for filter products */}
@@ -110,41 +116,47 @@ const AllProductsPage = () => {
                     </div>
 
                     {/* products section : main content */}
-                    <div className='w-full lg:col-span-3'>
-                        <div className='w-full'>
-                            <div className='py-4 bg-white mb-10 px-3 rounded-md flex justify-between items-start border '>
-                                <h2 className='text-lg font-medium text-slate-600'>Products: {12}</h2>
-                                <div className='flex justify-center items-center gap-3'>
-                                    <select className='p-1 border outline-0 text-slate-600 font-semibold' name='' id=''>
-                                        <option value="">Sort By</option>
-                                        <option value="">Low to High Price</option>
-                                        <option value="">High to Low Price</option>
-                                    </select>
+                    {
+                        products?.length > 0 ?
+                            <div className='w-full lg:col-span-3'>
+                                <div className='w-full'>
+                                    <div className='py-4 bg-white mb-10 px-3 rounded-md flex justify-between items-start border '>
+                                        <h2 className='text-lg font-medium text-slate-600'>Products: {12}</h2>
+                                        <div className='flex justify-center items-center gap-3'>
+                                            <select className='p-1 border outline-0 text-slate-600 font-semibold' name='' id=''>
+                                                <option value="">Sort By</option>
+                                                <option value="">Low to High Price</option>
+                                                <option value="">High to Low Price</option>
+                                            </select>
 
-                                    {/* hidden md and sm device */}
-                                    <div className='hidden lg:block'>
-                                        <div className='flex justify-center items-start gap-4'>
-                                            <div onClick={() => setStyles('grid')} className={`p-2 text-slate-600 hover:bg-slate-300 cursor-pointer rounded-sm ${styles === 'grid' && 'bg-slate-300'}`}>
-                                                <BsFillGridFill />
+                                            {/* hidden md and sm device */}
+                                            <div className='hidden lg:block'>
+                                                <div className='flex justify-center items-start gap-4'>
+                                                    <div onClick={() => setStyles('grid')} className={`p-2 text-slate-600 hover:bg-slate-300 cursor-pointer rounded-sm ${styles === 'grid' && 'bg-slate-300'}`}>
+                                                        <BsFillGridFill />
+                                                    </div>
+                                                    <div onClick={() => setStyles('list')} className={`p-2 text-slate-600 hover:bg-slate-300 cursor-pointer rounded-sm ${styles === 'list' && 'bg-slate-300'}`}>
+                                                        <FaThList />
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div onClick={() => setStyles('list')} className={`p-2 text-slate-600 hover:bg-slate-300 cursor-pointer rounded-sm ${styles === 'list' && 'bg-slate-300'}`}>
-                                                <FaThList />
-                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Products grid/list view */}
+                                    <div className='pb-8'>
+                                        <div className={`w-full grid gap-4 grid-cols-1 ${styles === 'grid' ? 'md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
+                                            {
+                                                products?.map((product, i) => <ProductsCard styles={styles} key={i} product={product} />)
+                                            }
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Products grid/list view */}
-                            <div className='pb-8'>
-                                <div className={`w-full grid gap-4 grid-cols-1 ${styles === 'grid' ? 'md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
-                                    {
-                                        products.map((product, i) => <ProductsCard styles={styles} key={i} product={product} />)
-                                    }
-                                </div>
+                            : <div className='flex justify-center items-start py-12 lg:col-span-3'>
+                                <p className='text-3xl font-bold text-center text-red-500'>Server is down...</p>
                             </div>
-                        </div>
-                    </div>
+                    }
 
                 </div>
             </div>
