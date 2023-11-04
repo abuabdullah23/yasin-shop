@@ -63,7 +63,7 @@ const AllProductsPage = () => {
                             </div>
 
                             {/* range tracking for filter products */}
-                            <div className='py-8 flex flex-col gap-5'>
+                            {/* <div className='py-8 flex flex-col gap-5'>
                                 <h2 className='text-3xl font-bold'>Price</h2>
                                 <div className='px-4 lg:px-0'>
                                     <Range
@@ -85,10 +85,10 @@ const AllProductsPage = () => {
                                         <span className='text-lg font-bold text-red-500'>৳{Math.floor(rangeState.values[0])} - ৳{Math.floor(rangeState.values[1])}</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* show rating wise products */}
-                            <div className='py-2 flex flex-col gap-5 md:mb-8'>
+                            <div className='py-5 flex flex-col gap-5 md:mb-8'>
                                 <h2 className='text-3xl font-bold'>Rating</h2>
                                 <div className='flex flex-col gap-3'>
                                     <div className='flex items-center gap-2'>
