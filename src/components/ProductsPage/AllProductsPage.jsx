@@ -109,7 +109,7 @@ const AllProductsPage = () => {
                             {/* Latest Products */}
                             <div className='hidden lg:block'>
                                 <div className='py-5 flex flex-col gap-4'>
-                                    <ProductSlider title='Latest Products' />
+                                    <ProductSlider latestProducts={products} title='Latest Products' />
                                 </div>
                             </div>
                         </div>

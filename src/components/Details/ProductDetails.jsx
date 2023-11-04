@@ -14,16 +14,8 @@ import { Pagination } from 'swiper/modules'
 import Ratings from '../Ratings/Ratings';
 import Reviews from '../Reviews/Reviews';
 import Link from 'next/link';
-
-import img1 from '../../../public/images/products/1.webp'
-import img3 from '../../../public/images/products/3.webp'
-import img4 from '../../../public/images/products/4.webp'
-import img2 from '../../../public/images/products/2.webp'
-import img5 from '../../../public/images/products/5.webp'
-import img6 from '../../../public/images/products/6.webp'
-import img7 from '../../../public/images/products/7.webp'
 import { useParams } from 'next/navigation';
-import { getSingleProduct } from '@/api/products';
+import { getAllProducts, getSingleProduct } from '@/api/products';
 
 
 const ProductDetails = () => {
@@ -33,6 +25,16 @@ const ProductDetails = () => {
     const productId = id[0];
     const [product, setProduct] = useState([]);
     const { _id, name, category, slug, price, description, image, stock, discount } = product;
+    const [products, setProducts] = useState([]);
+    const relatedProducts = products.filter((p) => slug === p.slug);
+
+
+    // get single product for details
+    useEffect(() => {
+        getAllProducts()
+            .then(data => setProducts(data))
+    }, [])
+
 
     // get single product for details
     useEffect(() => {
@@ -77,12 +79,12 @@ const ProductDetails = () => {
             {/* Product name */}
             <section className='py-5 mb-5'>
                 <div className='w-full h-full mx-auto'>
-                    <div className='flex justify-start items-center text-base text-slate-600  w-full'>
-                        <Link href='/'>Home</Link>
+                    <div className='flex flex-wrap justify-start items-center text-base text-slate-600  w-full'>
+                        <Link className='hover:underline ease-in duration-300 underline-offset-4' href='/'>Home</Link>
                         <span className='mt-1'><MdOutlineKeyboardArrowRight /></span>
-                        <Link href='/shop'>Shop</Link>
+                        <Link className='hover:underline ease-in duration-300 underline-offset-4' href='/shop'>Shop</Link>
                         <span className='mt-1'><MdOutlineKeyboardArrowRight /></span>
-                        <Link href={`/shop/${slug}`} className='text-red-500'>{category}</Link>
+                        <Link href={`/shop/${slug}`} className='text-red-500 hover:underline ease-in duration-300 underline-offset-4'>{category}</Link>
                         <span className='mt-1'><MdOutlineKeyboardArrowRight /></span>
                         <span className='text-cyan-600'>{name}</span>
                     </div>
@@ -106,8 +108,9 @@ const ProductDetails = () => {
                                 {image.map((img, i) => <div
                                     onClick={() => setImageLink(img)}
                                     key={i}
+                                    className='hover:border-2 border-cyan-400'
                                 >
-                                    <img className='cursor-pointer h-full object-cover hover:border-2 border-cyan-400' src={img} alt="product image" />
+                                    <img className='cursor-pointer h-full object-cover' src={img} alt="product image" />
                                 </div>)
                                 }
                             </Carousel>
@@ -227,21 +230,20 @@ const ProductDetails = () => {
                         className='mySwipper'
                     >
                         {
-                            [1, 2, 3, 4, 5, 6, 7].map((p, i) => <SwiperSlide key={i}>
-                                <Link href={'#'}>
+                            relatedProducts.map((p, i) => <SwiperSlide key={i}>
+                                <Link href={`/product-details/${p._id}`}>
                                     <div className='relative h-[270px]'>
                                         <div className='flex justify-center items-center absolute left-2 top-2 text-white w-[38px] h-[38px] rounded-full bg-red-500 text-xs font-semibold'>6%</div>
                                         <div className='w-full h-full '>
-                                            <img className='object-cover w-full h-full' src={`https://thumbs.dreamstime.com/b/bath-beauty-products-24145725.jpg`} alt="product image" />
+                                            <img className='object-cover w-full h-full' src={p.image} alt="product image" />
                                             <div className='absolute top-0 left-0 w-full h-full bg-[#000] opacity-25 hover:opacity-50 transition-all duration-500'>
                                             </div>
                                         </div>
                                     </div>
                                     <div className='p-4 flex flex-col gap-1'>
-                                        <h2 className=' text-lg'>Long Sleeve casual shirt
-                                            for Man</h2>
+                                        <h2 className=' text-lg'>{p.name}</h2>
                                         <div className='flex justify-start items-center gap-3'>
-                                            <h2 className='text-[#6699ff] text-lg font-bold'>$454</h2>
+                                            <h2 className='text-[#6699ff] text-lg font-bold'>৳{p.price}</h2>
                                             <div className='flex items-center gap-1 text-lg'>
                                                 <Ratings ratings={4.5} />
                                             </div>
