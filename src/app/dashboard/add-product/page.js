@@ -184,7 +184,7 @@ const AddProduct = () => {
                             <div className='flex flex-col w-full gap-1 relative'>
                                 <label htmlFor="category">Category</label>
                                 <input required readOnly value={category} onClick={() => setCatShow(!catShow)} className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-slate-100 rounded-md text-slate-600' id='category' placeholder='--select category--' type="text" name='category' />
-                                <div className={`absolute top-[101%] bg-slate-800 w-full transition-all z-20 ${catShow ? 'scale-100' : 'scale-0'}`}>
+                                <div className={`absolute top-[101%] bg-slate-300 border border-slate-400 w-full transition-all z-20 ${catShow ? 'scale-100 ' : 'scale-0'}`}>
                                     <div className='w-full px-4 py-2 fixed'>
                                         <input value={searchValue} onChange={categorySearch} className='w-full px-3 py-1 border border-slate-700 focus:border-indigo-500 outline-none bg-transparent rounded-md text-slate-600 overflow-hidden' type="text" placeholder='search' />
                                     </div>
@@ -193,7 +193,7 @@ const AddProduct = () => {
                                         {
                                             allCategory.map((c, i) => <span
                                                 key={i}
-                                                className={`cursor-pointer hover:bg-slate-900 w-full px-4 py-1 transition-all text-white ${category === c.title && 'bg-slate-950'}`}
+                                                className={`cursor-pointer hover:bg-slate-400 w-full px-4 py-1 transition-all text-black ${category === c.title && 'bg-slate-100'}`}
                                                 onClick={() => {
                                                     setCatShow(false)
                                                     setCategory(c.title)
@@ -249,7 +249,7 @@ const AddProduct = () => {
                         <button
                             disabled={loader ? true : false}
                             type="submit"
-                            className={`py-2 px-4 w-fit bg-slate-500 hover:shadow-slate-500/20 hover:shadow-lg text-white rounded-md mb-3 ${loader && 'bg-slate-400'} `}>
+                            className={`py-2 px-4 w-fit bg-cyan-500 hover:shadow-cyan-500/20 hover:shadow-lg text-white rounded-md mb-3 ${loader && 'bg-cyan-400'} `}>
                             {
                                 loader ? <Loader loadingText={'Adding Product...'} /> : 'Add Product'
                             }
