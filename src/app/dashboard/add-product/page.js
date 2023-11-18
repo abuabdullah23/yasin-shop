@@ -24,7 +24,7 @@ const AddProduct = () => {
 
     const url = `https://api.imgbb.com/1/upload?key=${process.env.NEXT_PUBLIC_IMGBB_API_SECRET}`
 
-    // get all category and send parameter
+    // get all category
     useEffect(() => {
         getAllCategories()
             .then((data) => setCategories(data))
