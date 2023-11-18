@@ -12,6 +12,22 @@ export const addProduct = async (productInfo) => {
 }
 
 
+// Update Product
+export const updateProduct = async (id, updateInfo) => {
+    const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/update-product/${id}`,
+        {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(updateInfo),
+        })
+    const data = await response.json()
+    return data;
+}
+
+
 // get all products
 export const getAllProducts = async () => {
     try {
@@ -33,6 +49,22 @@ export const getSingleProduct = async (id) => {
     } catch (error) {
         console.error('Error fetching product for details:', error);
         return [];
+    }
+}
+
+// Delete a product
+export const deleteSingleProduct = async (id) => {
+    try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/delete-product/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json',
+            }
+        })
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.log(error);
     }
 }
 

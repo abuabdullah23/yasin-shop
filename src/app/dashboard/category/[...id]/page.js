@@ -104,10 +104,10 @@ const page = () => {
                 Update Category: <span className='text-cyan-600'>{category.title}</span>
             </h2>
             <form onSubmit={handleUpdateCategory}>
-                <div className='flex flex-col w-full gap-1 mb-3'>
-                    <label htmlFor="category_name">Category name</label>
+                <div className='flex flex-col w-full gap-1 mb-5'>
+                    {/* <label htmlFor="category_name">Category name</label>
                     <input className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-slate-200 text-gray-700 rounded-md mb-3'
-                        readOnly type="text" id='category_name' name='category_name' defaultValue={category.title} placeholder='Edit category name' required />
+                        readOnly type="text" id='category_name' name='category_name' defaultValue={category.title} placeholder='Edit category name' required /> */}
 
                     <label htmlFor="category_name">Bangla Category Name</label>
                     <input className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-slate-200 text-gray-700 rounded-md '
