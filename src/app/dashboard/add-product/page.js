@@ -158,7 +158,7 @@ const AddProduct = () => {
 
     return (
         <div>
-            <div className='w-full p-4 bg-slate-50 rounded-md'>
+            <div className='w-full p-4 shadow-xl border-2 border-slate-300 rounded-md'>
                 <div className='flex justify-between items-center pb-4'>
                     <h2 className='text-xl font-semibold'>Add Products</h2>
                     <Link className='bg-slate-500 hover:shadow-slate-500/50 hover:shadow-lg rounded-sm px-7 py-2 my-2 text-white' href='/dashboard/all-products'>

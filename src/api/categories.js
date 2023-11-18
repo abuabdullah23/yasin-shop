@@ -22,6 +22,34 @@ export const getAllCategories = async () => {
     }
 }
 
+// get single category for details by id
+export const getSingleCategory = async (id) => {
+    try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/category-details/${id}`)
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching category for details:', error);
+        return [];
+    }
+}
+
+
+// Update category
+export const updateCategory = async (id, updateInfo) => {
+    const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/update-category/${id}`,
+        {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(updateInfo),
+        })
+    const data = await response.json()
+    return data;
+}
+
 // Delete a category
 export const deleteCategory = async (id) => {
     try {

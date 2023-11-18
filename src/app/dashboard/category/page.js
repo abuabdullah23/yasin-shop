@@ -25,12 +25,18 @@ const Category = () => {
     useEffect(() => {
         getAllCategories()
             .then((data) => setCategories(data))
-    }, [allCategory])
+    }, [])
 
     // set categories from backend
     useEffect(() => {
         setAllCategory(categories)
     }, [categories])
+
+    // refetch category
+    const refetchCategory = () => {
+        getAllCategories()
+            .then((data) => setCategories(data))
+    }
 
     // handleImage
     const handleImage = (e) => {
@@ -95,15 +101,10 @@ const Category = () => {
                     toast.success('Category added successful')
                     form.reset('');
                     setImageShow('');
-                    const remainingCategory = allCategory.filter((c) => c);
-                    setAllCategory(remainingCategory);
+                    refetchCategory();
                 }
                 if (data.error === true) {
                     toast.error(data.message)
-                    // const response = fetch(imgUploadUrl, {
-                    //     method: 'DELETE',
-                    //     body: imgDeleteUrl,
-                    // });
                 }
             })
             .catch(error => {
@@ -130,26 +131,7 @@ const Category = () => {
                     if (data.deletedCount > 0) {
                         toast.success('Delete your category successful');
                         const remainingCategory = allCategory.filter(c => c._id !== id);
-                        setAllCategory(remainingCategory);
-
-                        
-                        // delete image from imgBb after delete category
-                        // const imgDeleteUrl = deleteImgUrl;
-                        // fetch(imgDeleteUrl, {
-                        //     method: 'DELETE',
-                        // })
-                        //     .then((response) => {
-                        //         if (response.ok) {
-                        //             toast.success('Image deleted from imgBB');
-                        //         } else {
-                        //             console.error('Image deletion failed:', response.statusText);
-                        //         }
-                        //     })
-                        //     .catch((error) => {
-                        //         console.error('Error deleting image:', error);
-                        //     });
-
-
+                        setCategories(remainingCategory);
                     }
                 })
                     .catch(error => {
@@ -161,16 +143,16 @@ const Category = () => {
 
 
     return (
-        <div className='w-full p-4 bg-slate-50 rounded-md'>
+        <div className='w-full p-4 shadow-xl border-2 border-slate-300 rounded-md'>
             {/* Conditional rendering: show only small device */}
-            <div className='flex lg:hidden justify-between items-center mb-5 p-4 bg-slate-200 text-gray-700 rounded-md'>
+            <div className='flex lg:hidden justify-between items-center mb-2 p-4 bg-slate-200 text-gray-700 rounded-md'>
                 <h1 className='font-semibold text-sm'>Categories</h1>
-                <button onClick={() => setShow(true)} className='bg-indigo-500 shadow-lg hover:shadow-indigo-500/50 px-4 py-2 cursor-pointer rounded-sm text-sm'>Add</button>
+                <button onClick={() => setShow(true)} className='bg-cyan-500 shadow-lg hover:shadow-cyan-500/50 px-4 py-2 cursor-pointer rounded-sm text-sm text-white'>Add</button>
             </div>
 
             <div className='flex flex-wrap w-full'>
                 <div className='w-full lg:w-7/12 p-4 bg-slate-200 text-gray-700 rounded-md'>
-                    <div className='flex items-center justify-between'>
+                    <div className='flex flex-wrap items-center justify-between gap-3'>
                         <p>All Category: {allCategory.length}</p>
                         <Search
                             searchValue={searchValue}
@@ -190,15 +172,15 @@ const Category = () => {
                             </thead>
                             <tbody>
                                 {
-                                    allCategory.map((c, i) => <tr key={i}>
+                                    allCategory.map((c, i) => <tr key={i} className='hover:bg-slate-100 transition-all duration-200'>
                                         <td scope='row' className='py-1 px-4 font-medium whitespace-nowrap'>{i + 1}</td>
                                         <td scope='row' className='py-1 px-4 font-medium whitespace-nowrap'>
                                             <img className='h-11 w-11' src={c.image} alt="category image" /></td>
                                         <td scope='row' className='py-1 px-4 font-medium whitespace-nowrap' title={c.bn_title}><span>{c.title}</span></td>
                                         <td scope='row' className='py-1 px-4 font-medium whitespace-nowrap'>
                                             <div className='flex justify-start items-center gap-4'>
-                                                <Link href={'#'} className='p-[6px] bg-orange-500 text-white rounded-sm hover:shadow-lg hover:shadow-orange-500/50'><FaEdit /></Link>
-                                                <button onClick={() => handleDeleteCategory(c?._id, c?.imgDeleteUrl)} className='p-[6px] bg-red-500 text-white rounded-sm hover:shadow-lg hover:shadow-red-500/50'><FaTrashAlt /></button>
+                                                <Link href={`/dashboard/category/${c._id}`} title='এডিট করুন' className='p-[6px] bg-orange-500 text-white rounded-sm hover:shadow-lg hover:shadow-orange-500/50'><FaEdit /></Link>
+                                                <button onClick={() => handleDeleteCategory(c?._id, c?.imgDeleteUrl)} title='ডিলিট করুন' className='p-[6px] bg-red-500 text-white rounded-sm hover:shadow-lg hover:shadow-red-500/50'><FaTrashAlt /></button>
                                             </div>
                                         </td>
                                     </tr>)
@@ -224,14 +206,14 @@ const Category = () => {
                             <form onSubmit={handleAddCategory}>
                                 <div className='flex flex-col w-full gap-1 mb-3'>
                                     <label htmlFor="category_name">Category name</label>
-                                    <input className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-slate-200 text-gray-700 rounded-md '
+                                    <input className='px-4 py-2 border border-slate-700 focus:border-cyan-500 outline-none bg-slate-200 text-gray-700 rounded-md '
                                         type="text" id='category_name' name='category_name' placeholder='category name' required />
                                     <label htmlFor="category_name">Bangla Category Name</label>
-                                    <input className='px-4 py-2 border border-slate-700 focus:border-indigo-500 outline-none bg-slate-200 text-gray-700 rounded-md '
+                                    <input className='px-4 py-2 border border-slate-700 focus:border-cyan-500 outline-none bg-slate-200 text-gray-700 rounded-md '
                                         type="text" id='bn_title' name='bn_title' placeholder='Bangla category name' required />
                                 </div>
                                 <div>
-                                    <label className='flex flex-col justify-center items-center h-[238px] cursor-pointer border border-[#7fa9ff] border-dashed hover:border-indigo-500 w-full' htmlFor="image">
+                                    <label className='flex flex-col justify-center items-center h-[238px] cursor-pointer border border-[#7fa9ff] border-dashed hover:border-cyan-500 w-full' htmlFor="image">
                                         {
                                             imageShow ? <img className='h-full w-full object-cover object-top' src={imageShow} alt="image" /> :
                                                 <>
