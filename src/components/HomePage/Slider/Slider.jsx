@@ -44,7 +44,7 @@ const Slider = () => {
             responsive={responsive}
           >
             {
-              images.map((img, i) => <Link href={'#'} className='md:h-[440px] h-auto w-full block' key={i} to='#'>
+              images.map((img, i) => <Link href={'#'} className='md:h-[440px] h-auto w-full block' key={i}>
                 <img src={img} alt="slider image" />
               </Link>)
             }
