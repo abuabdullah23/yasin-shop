@@ -19,6 +19,11 @@ const ProductsPage = () => {
       })
   }, []);
 
+  // latest, top, discount products
+  const latestProducts = products.slice(0, 3);
+  const topRatedProducts = products.slice(0, 3).filter((r) => r.price <= 20); // TODO: have to change to top rated
+  const discountProducts = products.slice(0, 3).filter((d) => d.discount >= 10);
+
 
   return <div className='w-[100%] flex flex-wrap mx-auto my-12'>
     <div className="w-full">
@@ -41,15 +46,15 @@ const ProductsPage = () => {
         <div className='w-full flex flex-wrap mx-auto'>
           <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             <div className='overflow-hidden border-r'>
-              <ProductSlider title='Latest Products' />
+              <ProductSlider specialProducts={latestProducts} title='Latest Products' />
             </div>
 
             <div className='overflow-hidden border-r'>
-              <ProductSlider title='Top Rated Products' />
+              <ProductSlider specialProducts={topRatedProducts} title='Top Rated Products' />
             </div>
 
             <div className='overflow-hidden border-r'>
-              <ProductSlider title='Discount Product' />
+              <ProductSlider specialProducts={discountProducts} title='Discount Product' />
             </div>
           </div>
         </div>

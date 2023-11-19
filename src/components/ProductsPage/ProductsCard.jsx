@@ -16,9 +16,9 @@ const ProductsCard = ({ product, styles }) => {
                 </div>
 
                 <ul className='flex justify-center items-center gap-2 transition-all duration-500 absolute -bottom-10 group-hover:bottom-3 w-full'>
-                    <li className='w-[38px] h-[38px] rounded-full cursor-pointer flex justify-center items-center bg-gray-100 hover:bg-cyan-500 hover:text-white hover:rotate-[360deg] transition-all duration-500'><AiFillHeart /></li>
-                    <Link href={`/product-details/${_id}`} className='w-[38px] h-[38px] rounded-full cursor-pointer flex justify-center items-center bg-gray-100 hover:bg-cyan-500 hover:text-white hover:rotate-[360deg] transition-all duration-500'><FaEye /></Link>
-                    <li className='w-[38px] h-[38px] rounded-full cursor-pointer flex justify-center items-center bg-gray-100 hover:bg-cyan-500 hover:text-white hover:rotate-[360deg] transition-all duration-500'><AiOutlineShoppingCart /></li>
+                    <li className='w-[38px] h-[38px] rounded-full cursor-pointer flex justify-center items-center bg-gray-100 hover:bg-cyan-500 hover:text-white transition-all duration-500'><AiFillHeart /></li>
+                    <Link href={`/product-details/${_id}`} className='w-[38px] h-[38px] rounded-full cursor-pointer flex justify-center items-center bg-gray-100 hover:bg-cyan-500 hover:text-white transition-all duration-500'><FaEye /></Link>
+                    <li className='w-[38px] h-[38px] rounded-full cursor-pointer flex justify-center items-center bg-gray-100 hover:bg-cyan-500 hover:text-white transition-all duration-500'><AiOutlineShoppingCart /></li>
                 </ul>
             </div>
 
