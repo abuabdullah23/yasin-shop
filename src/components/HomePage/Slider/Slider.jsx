@@ -26,14 +26,10 @@ const Slider = () => {
 
 
   const images = [
-    'http://localhost:3000/images/banner/1.jpg',
-    'http://localhost:3000/images/banner/2.jpg',
-    'http://localhost:3000/images/banner/2.jpg',
-    'http://localhost:3000/images/banner/3.jpg',
-    'http://localhost:3000/images/banner/4.jpg',
-    'http://localhost:3000/images/banner/5.jpg',
-    'http://localhost:3000/images/banner/6.jpg',
-    'http://localhost:3000/images/banner/7.jpg',
+    'https://res.cloudinary.com/dtapzz2mi/image/upload/v1700387073/Yasin%20Shop/banner/banner_1_tctwdq.jpg',
+    'https://res.cloudinary.com/dtapzz2mi/image/upload/v1700387072/Yasin%20Shop/banner/banner_2_gonlkc.jpg',
+    'https://res.cloudinary.com/dtapzz2mi/image/upload/v1700387115/Yasin%20Shop/banner/banner_4_aac2vm.jpg',
+    'https://res.cloudinary.com/dtapzz2mi/image/upload/v1700387072/Yasin%20Shop/banner/banner_5_yrzdgb.jpg',
   ]
 
   return (
