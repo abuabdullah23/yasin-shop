@@ -57,11 +57,11 @@ console.log(specialProducts);
                 customButtonGroup={<ButtonGroup />}
             >
                 {
-                    products.map((product, index) => {
+                    products?.map((product, index) => {
                         return (
                             <div key={index} className='flex flex-col justify-start gap-2'>
                                 {
-                                    product.map((p, i) => <Link href={`/product-details/${p?._id}`} className='flex justify-start items-start' key={i} to='#'>
+                                    product?.map((p, i) => <Link href={`/product-details/${p?._id}`} className='flex justify-start items-start' key={i} to='#'>
                                         <img className='w-[110px] h-[110px]' src={p.image} alt="slider image" />
                                         <div className='px-3 flex justify-start items-start gap-1 flex-col text-slate-600 dark:text-gray-100'>
                                             <h2>{p.name}</h2>

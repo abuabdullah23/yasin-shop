@@ -20,9 +20,9 @@ const ProductsPage = () => {
   }, []);
 
   // latest, top, discount products
-  const latestProducts = products.slice(0, 3);
-  const topRatedProducts = products.slice(0, 3).filter((r) => r.price <= 20); // TODO: have to change to top rated
-  const discountProducts = products.slice(0, 3).filter((d) => d.discount >= 10);
+  const latestProducts = products?.slice(0, 3);
+  const topRatedProducts = products?.slice(0, 3).filter((r) => r.price <= 20); // TODO: have to change to top rated
+  const discountProducts = products?.slice(0, 3).filter((d) => d.discount >= 10);
 
 
   return <div className='w-[100%] flex flex-wrap mx-auto my-12'>
