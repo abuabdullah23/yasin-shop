@@ -42,7 +42,7 @@ const page = () => {
         e.preventDefault();
         setLoader(true)
         const form = e.target;
-        const category_name = form.category_name.value;
+        // const category_name = form.category_name.value;
         const bn_title = form.bn_title.value;
         const formData = new FormData();
         formData.append('image', categoryImage);
@@ -73,8 +73,8 @@ const page = () => {
         }
 
         const updateInfo = {
-            title: category_name,
-            slug: category_name.split(' ').join('-').toLowerCase(),
+            // title: category_name,
+            // slug: category_name.split(' ').join('-').toLowerCase(),
             bn_title,
             image: imgUrl || category.image,
             imgDeleteUrl: imgDeleteUrl || category.imgDeleteUrl
@@ -83,7 +83,7 @@ const page = () => {
         // add category method
         updateCategory(category?._id, updateInfo)
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 if (data.modifiedCount > 0) {
                     setLoader(false);
                     toast.success('Category Updated successful')

@@ -9,6 +9,9 @@ import { BsFillGridFill } from 'react-icons/bs';
 import { FaThList } from 'react-icons/fa';
 import ProductsCard from './ProductsCard';
 import { getAllProducts } from '@/api/products';
+import { capitalizeWords } from '@/utils/capitalizeWords';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+import Pagination from '../Pagination/Pagination';
 
 const AllProductsPage = () => {
     const [filter, setFilter] = useState(false);
@@ -16,6 +19,14 @@ const AllProductsPage = () => {
     const [styles, setStyles] = useState('grid');
     const [categories, setCategories] = useState([]);
     const [products, setProducts] = useState([]);
+    const [category, setCategory] = useState('');
+    const [sortOrder, setSortOrder] = useState('');
+    const [pageNumber, setPageNumber] = useState(1);
+    const [perPage, setPerPage] = useState(9);
+    const [totalProducts, setTotalProducts] = useState();
+
+    console.log(perPage);
+    console.log(pageNumber);
 
     // get categories
     useEffect(() => {
@@ -27,14 +38,27 @@ const AllProductsPage = () => {
 
     // get all products
     useEffect(() => {
-        getAllProducts()
+        getAllProducts(category, sortOrder, pageNumber, perPage)
             .then(data => {
-                setProducts(data)
+                setProducts(data.result);
+                setTotalProducts(data.total);
             })
-    }, []);
+    }, [category, sortOrder, pageNumber, perPage]);
+
+    // query category for search by category
+    const queryCategory = (e, value) => {
+        if (e.target.checked) {
+            setCategory(value)
+        } else {
+            setCategory('')
+        }
+    }
+
+    // latest products
+    const latestProducts = products?.slice(0, 3);
 
     return (
-        <section className='py-16'>
+        <section className='py-8 lg:py-16'>
             <div>
                 <div className={`block lg:hidden ${filter ? 'mb-6' : 'mb-6'}`}>
                     <button onClick={() => setFilter(!filter)} className='text-center w-full py-2 px-3 bg-cyan-500 text-white'>Filter Product</button>
@@ -51,7 +75,12 @@ const AllProductsPage = () => {
                                         <div className='py-4 h-[400px] overflow-y-auto'>
                                             {
                                                 categories?.map((c, i) => <div key={i} className='flex justify-start items-center gap-2 py-1'>
-                                                    <input type="checkbox" name="" id={c.title} />
+                                                    <input
+                                                        checked={category === c.slug ? true : false}
+                                                        onChange={(e) => queryCategory(e, c.slug)}
+                                                        type="checkbox"
+                                                        name=""
+                                                        id={c.title} />
                                                     <label className='block cursor-pointer' htmlFor={c.title}>{c.title}</label>
                                                 </div>)
                                             }
@@ -109,7 +138,7 @@ const AllProductsPage = () => {
                             {/* Latest Products */}
                             <div className='hidden lg:block'>
                                 <div className='py-5 flex flex-col gap-4'>
-                                    <ProductSlider latestProducts={products} title='Latest Products' />
+                                    <ProductSlider specialProducts={latestProducts} title='Latest Products' />
                                 </div>
                             </div>
                         </div>
@@ -117,16 +146,16 @@ const AllProductsPage = () => {
 
                     {/* products section : main content */}
                     {
-                        products?.length > 0 ?
+                        totalProducts > 0 ?
                             <div className='w-full lg:col-span-3'>
                                 <div className='w-full'>
                                     <div className='py-4 bg-white mb-10 px-3 rounded-md flex justify-between items-start border '>
-                                        <h2 className='text-lg font-medium text-slate-600'>Products: {12}</h2>
+                                        <h2 className='text-lg font-medium text-slate-600 transition-all duration-300'>{category ? capitalizeWords(category) : 'All Products'}: {products.length}</h2>
                                         <div className='flex justify-center items-center gap-3'>
-                                            <select className='p-1 border outline-0 text-slate-600 font-semibold' name='' id=''>
+                                            <select onChange={(e) => setSortOrder(e.target.value)} className='p-1 border outline-0 text-slate-600 font-semibold' name='' id=''>
                                                 <option value="">Sort By</option>
-                                                <option value="">Low to High Price</option>
-                                                <option value="">High to Low Price</option>
+                                                <option value="asc">Low to High Price</option>
+                                                <option value="desc">High to Low Price</option>
                                             </select>
 
                                             {/* hidden md and sm device */}
@@ -151,10 +180,39 @@ const AllProductsPage = () => {
                                             }
                                         </div>
                                     </div>
+
+                                    {/* pagination */}
+                                    <div className='flex items-center justify-end gap-8'>
+                                        <div className='flex items-center gap-3'>
+                                            <div><p>Per Page</p></div>
+                                            <select onChange={(e)=> setPerPage(parseInt((e.target.value)))} className='px-4 py-1 border border-slate-700 focus:border-gray-500 outline-none bg-gray-200 rounded-md text-slate-600'>
+                                                <option value={perPage}>{perPage}</option>
+                                                <option value="3">3</option>
+                                                <option value="6">6</option>
+                                                <option value="9">9</option>
+                                                <option value="18">18</option>
+                                                <option value="27">27</option>
+                                                <option value="36">36</option>
+                                                <option value="45">45</option>
+                                                <option value="54">54</option>
+                                                <option value="63">63</option>
+                                                <option value="100">100</option>
+                                            </select>
+                                        </div>
+                                        {
+                                            totalProducts > perPage && <Pagination
+                                                pageNumber={pageNumber}
+                                                setPageNumber={setPageNumber}
+                                                totalItem={totalProducts}
+                                                perPage={perPage}
+                                                showItem={(Math.floor(totalProducts / perPage)) + 2} />
+                                        }
+                                    </div>
+
                                 </div>
                             </div>
                             : <div className='flex justify-center items-start py-12 lg:col-span-3'>
-                                <p className='text-3xl font-bold text-center text-red-500'>Server is down...</p>
+                                <LoadingSpinner />
                             </div>
                     }
 

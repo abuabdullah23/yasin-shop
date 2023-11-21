@@ -158,10 +158,7 @@ const UpdateProductPage = () => {
             image: uploadedImageUrls
             // image: !product.image ? uploadedImageUrls : [...product.image, ...uploadedImageUrls]
         }
-
-        console.log(updateProductInfo);
         updateProduct(id, updateProductInfo).then((data) => {
-            console.log(data);
             if (data.modifiedCount > 0) {
                 toast.success('Product update successful')
                 setLoader(false);

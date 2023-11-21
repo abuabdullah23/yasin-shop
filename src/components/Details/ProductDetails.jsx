@@ -32,7 +32,7 @@ const ProductDetails = () => {
     // get single product for details
     useEffect(() => {
         getAllProducts()
-            .then(data => setProducts(data))
+            .then(data => setProducts(data.result))
     }, [])
 
 

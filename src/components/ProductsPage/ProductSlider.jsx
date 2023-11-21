@@ -8,7 +8,6 @@ const ProductSlider = ({ title, specialProducts }) => {
         specialProducts
     ]
 
-console.log(specialProducts);
 
     const responsive = {
         superLargeDesktop: {
@@ -62,7 +61,7 @@ console.log(specialProducts);
                             <div key={index} className='flex flex-col justify-start gap-2'>
                                 {
                                     product?.map((p, i) => <Link href={`/product-details/${p?._id}`} className='flex justify-start items-start' key={i} to='#'>
-                                        <img className='w-[110px] h-[110px]' src={p.image} alt="slider image" />
+                                        <img className='w-[110px] h-[110px] object-cover' src={p.image} alt="slider image" />
                                         <div className='px-3 flex justify-start items-start gap-1 flex-col text-slate-600 dark:text-gray-100'>
                                             <h2>{p.name}</h2>
                                             <span className='text-base font-bold'>৳{p.price}</span>

@@ -28,10 +28,10 @@ export const updateProduct = async (id, updateInfo) => {
 }
 
 
-// get all products
-export const getAllProducts = async () => {
+// get all products : api endPoint : ?slug=achar&pageNumber=1&perPage=2&sortField=price&sortOrder=asc
+export const getAllProducts = async (category, sortOrder, pageNumber, perPage) => {
     try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/get-all-products`)
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/get-all-products?slug=${category || ''}&pageNumber=${pageNumber || ''}&perPage=${perPage ||''}&sortField=price&sortOrder=${sortOrder || ''}`);
         const data = await response.json();
         return data;
     } catch (error) {

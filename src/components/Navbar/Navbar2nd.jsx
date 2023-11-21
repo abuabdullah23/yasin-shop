@@ -21,9 +21,9 @@ const Navbar2nd = () => {
   return (
     <div>
       {/* 2nd Nav */}
-      <div className="relative flex justify-end lg:justify-between items-center py-0 md:py-3">
+      <div className="relative flex justify-between items-center py-0 md:py-3">
         {/* Left Nav Item */}
-        <Link href="/" className=" hidden lg:block w-1/3">
+        <Link href="/" className="block w-1/3">
           <h3 className="text-xl">
             Yasin<span className="font-bold text-[#24A3B5]">Shop</span>
           </h3>
