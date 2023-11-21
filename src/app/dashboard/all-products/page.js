@@ -15,7 +15,7 @@ const AllProducts = () => {
     // get all products
     useEffect(() => {
         getAllProducts()
-            .then(data => setProducts(data))
+            .then(data => setProducts(data.result))
     }, [])
 
 
@@ -67,7 +67,7 @@ const AllProducts = () => {
                         </thead>
                         <tbody>
                             {
-                                products.map((item, i) => <tr key={item._id}>
+                                products?.map((item, i) => <tr key={item._id}>
                                     <td scope='row' className='py-1 px-4 font-medium whitespace-nowrap'>{i + 1}</td>
                                     <td scope='row' className='py-1 px-4 font-medium whitespace-nowrap'><img className='h-11 w-11' src={item.image} alt="category image" /></td>
                                     <td scope='row' className='py-1 px-4 font-medium whitespace-nowrap'><span>{item?.name?.slice(0, 20)}...</span></td>
